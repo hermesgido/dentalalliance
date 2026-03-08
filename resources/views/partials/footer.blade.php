@@ -74,7 +74,7 @@ form.addEventListener('submit', function(e) {
                 <li><a href="#programs">Our Programs</a></li>
                  <li><a href="#partners">Partners</a></li>
                 <li><a href="{{ route('contact') }}">Contact Us</a></li>
-                <li><a href="">Privacy Policy</a></li>
+                <li><a href="{{ url('/docs/%F0%9F%94%90%20PRIVACY%20POLICY.pdf') }}" target="_blank" rel="noopener">Privacy Policy</a></li>
 
               </ul>
               
@@ -145,8 +145,8 @@ form.addEventListener('submit', function(e) {
             <ul>
               <li><a href="#">© Copyright 2026 DA4EA. All Right
                   Reserved</a><span> | </span></li>
-              <li><a href="#">Privacy Policy</a><span> | </span></li>
-              <li><a href="#">Terms Of Condition</a></li>
+              <li><a href="{{ url('/docs/%F0%9F%94%90%20PRIVACY%20POLICY.pdf') }}" target="_blank" rel="noopener">Privacy Policy</a><span> | </span></li>
+              <li><a href="{{ url('/docs/Terms%20and%20Conditions%20DA4EA.pdf') }}" target="_blank" rel="noopener">Terms and Conditions</a></li>
             </ul>
           </div>
         </div>
