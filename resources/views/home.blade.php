@@ -56,16 +56,12 @@
             <div class="col-lg-6">
                 <div class="hero-header">
                     <h5 data-aos="fade-left" data-aos-duration="800"><img
-                            src="{{ asset('assets/img/icons/sub-logo1.svg') }}" alt> Your Partner in
-                        Dentistry</h5>
+                            src="{{ asset('assets/img/icons/sub-logo1.svg') }}" alt> Dental Leadership Platform for Africa.</h5>
                     <div class="space18"></div>
-                    <h1 class="text-anime-style-1">Advancing Dentistry in East Africa
-                        — Together</h1>
+                    <h1 class="text-anime-style-1">Based in Tanzania. Built for Africa - Building Capacity</h1>
                     <div class="space20"></div>
-                    <p data-aos="fade-left" data-aos-duration="1000">A regional
-                        platform connecting education, innovation, and impact in
-                        dentistry.
-                        Powered by OwosTanzania.</p>
+                    <p data-aos="fade-left" data-aos-duration="1000">A leadership-driven platform advancing clinical excellence, structured education,
+performance optimization, and humanitarian impact across Africa.</p>
                     <div class="space28"></div>
                     <div class="btn-area1">
                         <a href="{{ route('contact') }}" class="vl-btn2"><span class="text">Join
@@ -130,16 +126,13 @@
                     <div class="row" data-aos="fade-left" data-aos-duration="1000">
                         <div class="col-lg-6">
                             <ul>
-                                <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Elevate
-                                    clinical standards</li>
-                                <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt> Connect
-                                    regional & global experts</li>
+                                <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Elevate Clinical Standards</li>
+                                <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt> Connect Regional &amp; Global Experts</li>
                             </ul>
                         </div>
                         <div class="col-lg-6">
                             <ul>
-                                <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt> Generate
-                                    oral-health funding</li>
+                                <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt> Mobilize Funding for Oral Health</li>
                             </ul>
                         </div>
                     </div>
@@ -555,7 +548,8 @@
 
             <div class="col-lg-6">
                 <div class="images image-anime reveal">
-                    <img src="{{ asset('assets/img/all-images/contact/contact-img2.png') }}" alt>
+                    {{-- <img src="{{ asset(path: 'assets/img/all-images/contact/contact-img2.png') }}" alt> --}}
+                  <img src="{{ asset(path: 'assets/photos/contact.jpg') }}" alt>
                 </div>
             </div>
             <div class="space60"></div>
