@@ -58,6 +58,26 @@
         .hero2-section-area .mobile-side-overlay {
             display: none;
         }
+        @media (min-width: 768px) {
+            .hero2-section-area .bg-img {
+                display: block !important;
+            }
+            .hero2-section-area .bg-img::after {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.48)) !important;
+                opacity: 1 !important;
+            }
+            .hero2-section-area .bg-img img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center center !important;
+                transform: none !important;
+            }
+            .hero2-section-area .mobile-edge-images,
+            .hero2-section-area .mobile-side-overlay {
+                display: none !important;
+            }
+        }
         .hero2-section-area .bg-img::after {
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35));
             opacity: 1;
