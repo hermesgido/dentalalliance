@@ -49,32 +49,86 @@
 <!--===== HERO AREA STARTS =======-->
 <div class="hero2-section-area sp1" style="position: relative; overflow: hidden;">
     <style>
+        .hero2-section-area .bg-img {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+        .hero2-section-area .mobile-edge-images,
+        .hero2-section-area .mobile-side-overlay {
+            display: none;
+        }
         .hero2-section-area .bg-img::after {
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35));
             opacity: 1;
         }
         @media (max-width: 767px) {
-            .hero2-section-area {
-                min-height: 680px;
+            .hero2-section-area .bg-img {
+                display: none;
             }
-            .hero2-section-area .bg-img,
-            .hero2-section-area .bg-img img {
+            .hero2-section-area .mobile-edge-images {
+                display: flex;
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                background: #0b0b0b;
+                overflow: hidden;
+            }
+            .hero2-section-area .mobile-edge-images::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                width: 28%;
+                transform: translateX(-50%);
+                background: linear-gradient(90deg, rgba(11, 11, 11, 0), rgba(11, 11, 11, 0.55), rgba(11, 11, 11, 0));
+                z-index: 2;
+                pointer-events: none;
+            }
+            .hero2-section-area .mobile-edge-images .edge-panel {
+                position: relative;
+                width: 50%;
                 height: 100%;
+                overflow: hidden;
             }
-            .hero2-section-area .bg-img img {
-                object-fit: contain !important;
-                object-position: center top;
-                background: #0f172a;
+            .hero2-section-area .mobile-edge-images img {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: auto;
+                max-width: none;
+                filter: brightness(0.58);
             }
-            .hero2-section-area .bg-img::after {
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.22));
+            .hero2-section-area .mobile-edge-images .left-panel img {
+                left: 0;
+                transform: translateX(-16%);
+            }
+            .hero2-section-area .mobile-edge-images .right-panel img {
+                right: 0;
+                transform: translateX(16%);
+            }
+            .hero2-section-area .mobile-side-overlay {
+                display: block;
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.22));
+                z-index: 0;
             }
         }
     </style>
     <div class="bg-img">
         <img src="{{ asset('assets/photos/header01.jpg') }}" alt style="filter: brightness(0.9) saturate(0.85);">
     </div>
-    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35)); z-index: 0;"></div>
+    <div class="mobile-edge-images">
+        <div class="edge-panel left-panel">
+            <img src="{{ asset('assets/photos/header01.jpg') }}" alt>
+        </div>
+        <div class="edge-panel right-panel">
+            <img src="{{ asset('assets/photos/header01.jpg') }}" alt>
+        </div>
+    </div>
+    <div class="mobile-side-overlay"></div>
     <div class="container" style="position: relative; z-index: 1; color: #fff;">
         <div class="row align-items-center">
             <div class="col-lg-6">
