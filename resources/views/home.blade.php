@@ -132,7 +132,7 @@
                 display: block;
                 position: absolute;
                 inset: 0;
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+                background: linear-gradient(180deg, rgba(3, 3, 3, 0.997), rgba(0, 0, 0, 0.3));
                 z-index: 0;
             }
         }
