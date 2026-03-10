@@ -56,8 +56,10 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="hero-header" style="color: #fff;">
-                    <h5 data-aos="fade-left" data-aos-duration="800"><img
-                            src="{{ asset('assets/img/icons/sub-logo1.svg') }}" alt> Dental Leadership Platform for Africa.</h5>
+                    <h5 data-aos="fade-left" data-aos-duration="800">
+                        {{-- <img
+                            src="{{ asset('assets/img/icons/sub-logo1.svg') }}" alt>  --}}
+                            Dental Leadership Platform for Africa.</h5>
                     <div class="space18"></div>
                     <h1 class="text-anime-style-1" style="color: #fff;">Based in Tanzania. Built for Africa - Building Capacity</h1>
                     <div class="space20"></div>
@@ -72,7 +74,7 @@ performance optimization, and humanitarian impact across Africa.</p>
             </div>
             <div class="col-lg-6" data-aos="zoom-in-up" data-aos-duration="1000">
                 <div class="hero2-images">
-                    <img src="{{ asset('assets/img/elements/elements6.png') }}" alt class="elements6">
+                    {{-- <img src="{{ asset('assets/img/elements/elements6.png') }}" alt class="elements6"> --}}
                     <div class="img1">
                                                 <img src="{{ asset('assets/photos/top.jpg') }}" alt>
 
