@@ -49,9 +49,9 @@
 <!--===== HERO AREA STARTS =======-->
 <div class="hero2-section-area sp1" style="position: relative; overflow: hidden;">
     <div class="bg-img">
-        <img src="{{ asset('assets/photos/header01.jpg') }}" alt style="filter: brightness(0.8) saturate(0.85);">
+        <img src="{{ asset('assets/photos/header01.jpg') }}" alt style="filter: brightness(0.9) saturate(0.85);">
     </div>
-    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42, 41, 41, 0.55), rgba(26, 26, 26, 0.35)); z-index: 0;"></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42, 41, 41, 0.55), rgba(82, 81, 81, 0.35)); z-index: 0;"></div>
     <div class="container" style="position: relative; z-index: 1; color: #fff;">
         <div class="row align-items-center">
             <div class="col-lg-6">
