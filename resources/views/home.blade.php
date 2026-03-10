@@ -88,9 +88,12 @@ performance optimization, and humanitarian impact across Africa.</p>
         <div class="row align-items-center">
             <div class="col-lg-6 d-none d-md-block">
                 <div class="about2-images-area">
+                    
                     <img src="{{ asset('assets/img/elements/elements7.png') }}" alt class="elements7 keyframe5">
                     <div class="check-text aniamtion-key-1">
-                        <img src="{{ asset('assets/img/icons/check3.svg') }}" alt>
+                                                <img src="{{ asset(path: 'assets/photos/search01.jpg') }}" alt>
+
+                        {{-- <img src="{{ asset(path: 'assets/img/icons/check3.svg') }}" alt> --}}
                         <p>With 15+ years of experience
                             Medicines Shop community</p>
                     </div>
@@ -546,10 +549,10 @@ performance optimization, and humanitarian impact across Africa.</p>
                 </div>
             </div>
 
-            <div class="col-lg-6">
-                <div class="images image-anime reveal">
+            <div class="col-lg-6 d-flex">
+                <div class="images image-anime reveal w-100 h-100">
                     {{-- <img src="{{ asset(path: 'assets/img/all-images/contact/contact-img2.png') }}" alt> --}}
-                  <img src="{{ asset(path: 'assets/photos/contact.jpg') }}" alt>
+                    <img src="{{ asset(path: 'assets/photos/Neurons1.jpg') }}" alt style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
                 </div>
             </div>
             <div class="space60"></div>
