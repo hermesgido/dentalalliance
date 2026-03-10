@@ -47,20 +47,21 @@
 <!--===== MOBILE HEADER STARTS =======-->
 
 <!--===== HERO AREA STARTS =======-->
-<div class="hero2-section-area sp1">
+<div class="hero2-section-area sp1" style="position: relative; overflow: hidden;">
     <div class="bg-img">
-        <img src="{{ asset('assets/img/all-images/hero/hero-img2.png') }}" alt>
+        <img src="{{ asset('assets/photos/header01.jpg') }}" alt style="filter: brightness(0.8) saturate(0.85);">
     </div>
-    <div class="container">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.35)); z-index: 0;"></div>
+    <div class="container" style="position: relative; z-index: 1; color: #fff;">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <div class="hero-header">
+                <div class="hero-header" style="color: #fff;">
                     <h5 data-aos="fade-left" data-aos-duration="800"><img
                             src="{{ asset('assets/img/icons/sub-logo1.svg') }}" alt> Dental Leadership Platform for Africa.</h5>
                     <div class="space18"></div>
-                    <h1 class="text-anime-style-1">Based in Tanzania. Built for Africa - Building Capacity</h1>
+                    <h1 class="text-anime-style-1" style="color: #fff;">Based in Tanzania. Built for Africa - Building Capacity</h1>
                     <div class="space20"></div>
-                    <p data-aos="fade-left" data-aos-duration="1000">A leadership-driven platform advancing clinical excellence, structured education,
+                    <p data-aos="fade-left" data-aos-duration="1000" style="color: #f1f1f1;">A leadership-driven platform advancing clinical excellence, structured education,
 performance optimization, and humanitarian impact across Africa.</p>
                     <div class="space28"></div>
                     <div class="btn-area1">
@@ -73,7 +74,10 @@ performance optimization, and humanitarian impact across Africa.</p>
                 <div class="hero2-images">
                     <img src="{{ asset('assets/img/elements/elements6.png') }}" alt class="elements6">
                     <div class="img1">
-                        <img src="{{ asset('assets/img/all-images/hero/hero-img3.png') }}" alt>
+                                                <img src="{{ asset('assets/photos/top.jpg') }}" alt>
+
+                        {{-- <img src="{{ asset('assets/img/all-images/hero/hero-img3.png') }}" alt> --}}
+                        
                     </div>
                 </div>
             </div>
