@@ -82,7 +82,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                 <div class="hero2-images">
                     {{-- <img src="{{ asset('assets/img/elements/elements6.png') }}" alt class="elements6"> --}}
                     <div class="img1">
-                                                <img src="{{ asset('assets/photos/top.jpg') }}" alt>
+                                                {{-- <img src="{{ asset(path: 'assets/photos/top.jpg') }}" alt> --}}
 
                         {{-- <img src="{{ asset('assets/img/all-images/hero/hero-img3.png') }}" alt> --}}
                         

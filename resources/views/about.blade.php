@@ -80,34 +80,88 @@
         <div class="row">
             <div class="col-lg-8 m-auto">
                 <div class="heading4 text-center space-margin60">
-                    <h5 class="vl-section-subtitle">DA4EA<span> | </span> Advancing Dentistry in East Africa <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
-                            <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992" stroke="#02015A" stroke-width="1.5" />
-                        </svg>
-                    </h5>
-                    <h2 class="vl-section-title text-anime-style-3">Who We Are</h2>
+                    <h2 class="vl-section-title text-anime-style-3">About DA4EA</h2>
+                    <p class="mt-3">Purpose: Legitimacy + vision + leadership clarity.</p>
                 </div>
             </div>
         </div>
 
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="contact-boxarea">
-                    <h4>Our Mission</h4>
-                    <div class="space12"></div>
-                    <p>We elevate oral-health standards in East Africa by connecting education, innovation, and humanitarian impact—partnering with clinicians, labs, and industry to build lasting capacity.</p>
-                    <div class="space24"></div>
-                    <h4>Our Approach</h4>
-                    <div class="space12"></div>
-                    <ul class="list-unstyled">
-                        <li><i class="fa-solid fa-circle-check"></i> Advanced clinical and leadership programs</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Regional and global expert network</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Reinvestment into humanitarian oral-health projects</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="images image-anime reveal">
-                    <img src="{{ asset('assets/photos/contact.jpg') }}" alt style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="benefites-box">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="benefites-widget-boxarea">
+                                <div class="icons">
+                                    <img src="{{ asset('assets/img/icons/hero-icon3.svg') }}" alt>
+                                </div>
+                                <div class="content-area">
+                                    <a href="" class="title">Our Story</a>
+                                    <div class="space16"></div>
+                                    <ul>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Why DA4EA was created</li>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Relationship to OwosTanzania &amp; One World One Smile</li>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>From missions -&gt; systems -&gt; sustainability</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="benefites-widget-boxarea">
+                                <div class="icons">
+                                    <img src="{{ asset('assets/img/icons/hero-icon4.svg') }}" alt>
+                                </div>
+                                <div class="content-area">
+                                    <a href="" class="title">Vision</a>
+                                    <div class="space16"></div>
+                                    <p>A future where East African dentistry:</p>
+                                    <ul>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Is clinically excellent</li>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Regionally connected</li>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Financially self-sustaining</li>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Globally respected</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="benefites-widget-boxarea">
+                                <div class="icons">
+                                    <img src="{{ asset('assets/img/icons/hero-icon2.svg') }}" alt>
+                                </div>
+                                <div class="content-area">
+                                    <a href="" class="title">Mission</a>
+                                    <div class="space16"></div>
+                                    <p>To serve as a central platform for:</p>
+                                    <ul>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Advanced dental education</li>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Cross-border collaboration</li>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Ethical market access</li>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Sustainable humanitarian impact</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="benefites-widget-boxarea">
+                                <div class="icons">
+                                    <img src="{{ asset('assets/img/icons/hero-icon1.svg') }}" alt>
+                                </div>
+                                <div class="content-area">
+                                    <a href="" class="title">Our Model: Social Enterprise</a>
+                                    <div class="space16"></div>
+                                    <ul>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Education &amp; consulting generate revenue</li>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Revenue -&gt; reinvested into humanitarian programs</li>
+                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Not charity. Not extraction. Circular impact.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -115,43 +169,60 @@
         <div class="space60"></div>
 
         <div class="row">
+            <div class="col-lg-8 m-auto">
+                <div class="heading2 text-center space-margin60">
+                    <div class="space20"></div>
+                    <h2 class="text-anime-style-3">How The Model Works</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-lg-4 col-md-6">
-                <div class="single-box">
-                    <div class="icons">
-                        <img src="{{ asset('assets/img/icons/hero-icon3.svg') }}" alt>
+                <div class="work-single-boxarea">
+                    <img src="{{ asset('assets/img/elements/elements4.png') }}" alt class="elements4">
+                    <div class="img1">
+                        <img src="{{ asset('assets/img/all-images/works/work-img1.png') }}" alt>
                     </div>
-                    <div class="text">
-                        <h4>Education</h4>
-                        <div class="space14"></div>
-                        <p>Structured programs combining clinical mastery with leadership and practice growth.</p>
+                    <div class="space32"></div>
+                    <div class="textarea">
+                        <span>1</span>
+                        <div class="space18"></div>
+                        <a href>Education &amp; Consulting</a>
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6">
-                <div class="single-box">
-                    <div class="icons">
-                        <img src="{{ asset('assets/img/icons/hero-icon4.svg') }}" alt>
+                <div class="work-single-boxarea">
+                    <img src="{{ asset('assets/img/elements/elements4.png') }}" alt class="elements4 d-lg-block d-none">
+                    <div class="img1">
+                        <img src="{{ asset('assets/img/all-images/works/work-img2.png') }}" alt>
                     </div>
-                    <div class="text">
-                        <h4>Innovation</h4>
-                        <div class="space14"></div>
-                        <p>Digital workflows, implantology, and aesthetics adapted for East Africa.</p>
+                    <div class="space32"></div>
+                    <div class="textarea">
+                        <span>2</span>
+                        <div class="space18"></div>
+                        <a href>Revenue Reinvestment</a>
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6">
-                <div class="single-box">
-                    <div class="icons">
-                        <img src="{{ asset('assets/img/icons/hero-icon1.svg') }}" alt>
+                <div class="work-single-boxarea">
+                    <div class="img1">
+                        <img src="{{ asset('assets/img/all-images/works/work-img3.png') }}" alt>
                     </div>
-                    <div class="text">
-                        <h4>Impact</h4>
-                        <div class="space14"></div>
-                        <p>Profits are reinvested into humanitarian oral-health initiatives across the region.</p>
+                    <div class="space32"></div>
+                    <div class="textarea">
+                        <span>3</span>
+                        <div class="space18"></div>
+                        <a href>Circular Impact</a>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
