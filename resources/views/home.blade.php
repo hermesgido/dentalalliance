@@ -133,10 +133,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                     <h2 class="text-anime-style-3">What Is Dental Alliance for East
                         Africa?</h2>
                     <div class="space16"></div>
-                    <p data-aos="fade-left" data-aos-duration="900">Dental Alliance
-                        for East Africa (DA4EA) is a social enterprise and professional
-                        platform designed
-                        to:</p>
+                    <p data-aos="fade-left" data-aos-duration="900">Dental Alliance for East Africa (DA4EA) is a social enterprise powered by OwosTanzania, and professional platform designed to:</p>
                     <div class="space8"></div>
                     <div class="row" data-aos="fade-left" data-aos-duration="1000">
                         <div class="col-lg-6">
