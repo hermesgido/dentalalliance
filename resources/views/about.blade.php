@@ -15,6 +15,112 @@
     #vl-header-sticky .vl-logo img {
         filter: brightness(0) invert(1);
     }
+    .about-modern-section {
+        background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 100%);
+    }
+    .about-purpose-pill {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: #e7f0ff;
+        color: #1c4ca1;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .about-modern-card {
+        height: 100%;
+        border: 1px solid #e9edf5;
+        border-radius: 16px;
+        padding: 28px;
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(14, 30, 64, 0.06);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .about-modern-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 40px rgba(14, 30, 64, 0.12);
+        border-color: #d6e4ff;
+    }
+    .about-modern-card h4 {
+        margin-bottom: 14px;
+    }
+    .about-modern-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .about-modern-list li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px;
+        color: #3a4355;
+    }
+    .about-modern-list li:last-child {
+        margin-bottom: 0;
+    }
+    .about-modern-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #1d4ed8;
+        box-shadow: inset 0 0 0 4px #dbeafe;
+    }
+    .about-flow-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+    .about-flow-step {
+        position: relative;
+        border-radius: 16px;
+        padding: 24px;
+        border: 1px solid #e9edf5;
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(14, 30, 64, 0.06);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .about-flow-step:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 40px rgba(14, 30, 64, 0.12);
+    }
+    .about-flow-step .step-number {
+        display: inline-flex;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: #fff;
+        background: #1d4ed8;
+        margin-bottom: 12px;
+    }
+    .about-flow-step::after {
+        content: "\f061";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        right: -12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #94a3b8;
+        font-size: 16px;
+    }
+    .about-flow-step:last-child::after {
+        display: none;
+    }
+    @media (max-width: 991px) {
+        .about-flow-wrap {
+            grid-template-columns: 1fr;
+        }
+        .about-flow-step::after {
+            display: none;
+        }
+    }
 </style>
 
 <div class="space8 d-lg-block d-none"></div>
@@ -75,154 +181,96 @@
     </div>
 </div>
 
-<div class="contact-inner-section-area sp2">
+<div class="about-modern-section sp2">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 m-auto">
                 <div class="heading4 text-center space-margin60">
                     <h2 class="vl-section-title text-anime-style-3">About DA4EA</h2>
-                    <p class="mt-3">Purpose: Legitimacy + vision + leadership clarity.</p>
+                    <div class="space16"></div>
+                    <span class="about-purpose-pill">Purpose: Legitimacy + vision + leadership clarity.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-lg-6">
+                <div class="about-modern-card" data-aos="fade-up" data-aos-duration="800">
+                    <h4>Our Story</h4>
+                    <ul class="about-modern-list">
+                        <li>Why DA4EA was created</li>
+                        <li>Relationship to OwosTanzania &amp; One World One Smile</li>
+                        <li>From missions -&gt; systems -&gt; sustainability</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="about-modern-card" data-aos="fade-up" data-aos-duration="900">
+                    <h4>Vision</h4>
+                    <p>A future where East African dentistry:</p>
+                    <ul class="about-modern-list">
+                        <li>Is clinically excellent</li>
+                        <li>Regionally connected</li>
+                        <li>Financially self-sustaining</li>
+                        <li>Globally respected</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-lg-6">
+                <div class="about-modern-card" data-aos="fade-up" data-aos-duration="1000">
+                    <h4>Mission</h4>
+                    <p>To serve as a central platform for:</p>
+                    <ul class="about-modern-list">
+                        <li>Advanced dental education</li>
+                        <li>Cross-border collaboration</li>
+                        <li>Ethical market access</li>
+                        <li>Sustainable humanitarian impact</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="about-modern-card" data-aos="fade-up" data-aos-duration="1100">
+                    <h4>Our Model: Social Enterprise</h4>
+                    <p>Clear visual explanation:</p>
+                    <ul class="about-modern-list">
+                        <li>Education &amp; consulting generate revenue</li>
+                        <li>Revenue -&gt; reinvested into humanitarian programs</li>
+                        <li>Not charity. Not extraction. Circular impact.</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-12">
-                <div class="benefites-box">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="benefites-widget-boxarea">
-                                <div class="icons">
-                                    <img src="{{ asset('assets/img/icons/hero-icon3.svg') }}" alt>
-                                </div>
-                                <div class="content-area">
-                                    <a href="" class="title">Our Story</a>
-                                    <div class="space16"></div>
-                                    <ul>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Why DA4EA was created</li>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Relationship to OwosTanzania &amp; One World One Smile</li>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>From missions -&gt; systems -&gt; sustainability</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6">
-                            <div class="benefites-widget-boxarea">
-                                <div class="icons">
-                                    <img src="{{ asset('assets/img/icons/hero-icon4.svg') }}" alt>
-                                </div>
-                                <div class="content-area">
-                                    <a href="" class="title">Vision</a>
-                                    <div class="space16"></div>
-                                    <p>A future where East African dentistry:</p>
-                                    <ul>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Is clinically excellent</li>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Regionally connected</li>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Financially self-sustaining</li>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Globally respected</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6">
-                            <div class="benefites-widget-boxarea">
-                                <div class="icons">
-                                    <img src="{{ asset('assets/img/icons/hero-icon2.svg') }}" alt>
-                                </div>
-                                <div class="content-area">
-                                    <a href="" class="title">Mission</a>
-                                    <div class="space16"></div>
-                                    <p>To serve as a central platform for:</p>
-                                    <ul>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Advanced dental education</li>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Cross-border collaboration</li>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Ethical market access</li>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Sustainable humanitarian impact</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6">
-                            <div class="benefites-widget-boxarea">
-                                <div class="icons">
-                                    <img src="{{ asset('assets/img/icons/hero-icon1.svg') }}" alt>
-                                </div>
-                                <div class="content-area">
-                                    <a href="" class="title">Our Model: Social Enterprise</a>
-                                    <div class="space16"></div>
-                                    <ul>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Education &amp; consulting generate revenue</li>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Revenue -&gt; reinvested into humanitarian programs</li>
-                                        <li><img src="{{ asset('assets/img/icons/check2.svg') }}" alt>Not charity. Not extraction. Circular impact.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="space60"></div>
-
-        <div class="row">
-            <div class="col-lg-8 m-auto">
                 <div class="heading2 text-center space-margin60">
-                    <div class="space20"></div>
                     <h2 class="text-anime-style-3">How The Model Works</h2>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="work-single-boxarea">
-                    <img src="{{ asset('assets/img/elements/elements4.png') }}" alt class="elements4">
-                    <div class="img1">
-                        <img src="{{ asset('assets/img/all-images/works/work-img1.png') }}" alt>
-                    </div>
-                    <div class="space32"></div>
-                    <div class="textarea">
-                        <span>1</span>
-                        <div class="space18"></div>
-                        <a href>Education &amp; Consulting</a>
-                    </div>
-                </div>
+        <div class="about-flow-wrap">
+            <div class="about-flow-step" data-aos="zoom-in-up" data-aos-duration="900">
+                <span class="step-number">1</span>
+                <h5>Education &amp; Consulting</h5>
+                <p>Programs and advisory services generate sustainable revenue.</p>
             </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="work-single-boxarea">
-                    <img src="{{ asset('assets/img/elements/elements4.png') }}" alt class="elements4 d-lg-block d-none">
-                    <div class="img1">
-                        <img src="{{ asset('assets/img/all-images/works/work-img2.png') }}" alt>
-                    </div>
-                    <div class="space32"></div>
-                    <div class="textarea">
-                        <span>2</span>
-                        <div class="space18"></div>
-                        <a href>Revenue Reinvestment</a>
-                    </div>
-                </div>
+            <div class="about-flow-step" data-aos="zoom-in-up" data-aos-duration="1000">
+                <span class="step-number">2</span>
+                <h5>Revenue Reinvestment</h5>
+                <p>Income is channeled back into high-impact oral-health initiatives.</p>
             </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="work-single-boxarea">
-                    <div class="img1">
-                        <img src="{{ asset('assets/img/all-images/works/work-img3.png') }}" alt>
-                    </div>
-                    <div class="space32"></div>
-                    <div class="textarea">
-                        <span>3</span>
-                        <div class="space18"></div>
-                        <a href>Circular Impact</a>
-                    </div>
-                </div>
+            <div class="about-flow-step" data-aos="zoom-in-up" data-aos-duration="1100">
+                <span class="step-number">3</span>
+                <h5>Circular Impact</h5>
+                <p>Not charity. Not extraction. A repeatable social-enterprise model.</p>
             </div>
         </div>
-
     </div>
 </div>
 
