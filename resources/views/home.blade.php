@@ -48,10 +48,16 @@
 
 <!--===== HERO AREA STARTS =======-->
 <div class="hero2-section-area sp1" style="position: relative; overflow: hidden;">
+    <style>
+        .hero2-section-area .bg-img::after {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35));
+            opacity: 1;
+        }
+    </style>
     <div class="bg-img">
         <img src="{{ asset('assets/photos/header01.jpg') }}" alt style="filter: brightness(0.9) saturate(0.85);">
     </div>
-    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42, 41, 41, 0.55), rgba(82, 81, 81, 0.35)); z-index: 0;"></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35)); z-index: 0;"></div>
     <div class="container" style="position: relative; z-index: 1; color: #fff;">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -340,7 +346,8 @@ performance optimization, and humanitarian impact across Africa.</p>
             <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-duration="800">
                 <div class="service2-single-boxarea">
                     <div class="img1">
-                        <img src="{{ asset('assets/img/all-images/service/service-img6.png') }}" alt>
+                      <img src="{{ asset(path: 'assets/photos/people01.jpg') }}" alt>
+                        {{-- <img src="{{ asset(path: 'assets/img/all-images/service/service-img6.png') }}" alt> --}}
                         <div class="arrow">
                             <a href=""><i class="fa-solid fa-arrow-right"></i></a>
                         </div>
@@ -359,7 +366,9 @@ performance optimization, and humanitarian impact across Africa.</p>
             <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-duration="900">
                 <div class="service2-single-boxarea">
                     <div class="img1">
-                        <img src="{{ asset('assets/img/all-images/service/service-img7.png') }}" alt>
+                                              <img src="{{ asset(path: 'assets/photos/people2.jpg') }}" alt>
+
+                        {{-- <img src="{{ asset(path: 'assets/img/all-images/service/service-img7.png') }}" alt> --}}
                         <div class="arrow">
                             <a href=""><i class="fa-solid fa-arrow-right"></i></a>
                         </div>
@@ -376,9 +385,10 @@ performance optimization, and humanitarian impact across Africa.</p>
             </div>
 
             <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-duration="1000">
-                <div class="service2-single-boxarea">
+                <div class="service2-single-boxarea"> 
                     <div class="img1">
-                        <img src="{{ asset('assets/img/all-images/service/service-img8.png') }}" alt>
+                       <img src="{{ asset(path: 'assets/photos/people3.jpeg') }}" alt>
+                        {{-- <img src="{{ asset('assets/img/all-images/service/service-img8.png') }}" alt> --}}
                         <div class="arrow">
                             <a href=""><i class="fa-solid fa-arrow-right"></i></a>
                         </div>
