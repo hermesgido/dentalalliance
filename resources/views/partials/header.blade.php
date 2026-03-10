@@ -78,7 +78,7 @@
                     <li class="has-dropdown">
                       <a href="#programs">Programs <span class="arrow-size">
                     </li>
-                    <li><a href="#">About Us <span class="arrow-size"></span></a>
+                    <li><a href="{{ route('about') }}">About Us <span class="arrow-size"></span></a>
                     </li>
                     <li><a href="{{ route('contact') }}">Contact Us<span class="arrow-size"></span></a>
                     </li>

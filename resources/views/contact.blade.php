@@ -1,8 +1,24 @@
 @include('partials.header')
 
 
+<style>
+    /* Contact page: ensure header navigation stays readable on dark hero */
+    #vl-header-sticky {
+        background: rgba(0, 0, 0, 0.65);
+    }
+    #vl-header-sticky .vl-main-menu a,
+    #vl-header-sticky .vl-hero-btn .vl-btn2 .text,
+    #vl-header-sticky .vl-hero-btn .vl-btn2 i,
+    #vl-header-sticky .vl-header-action-item button,
+    #vl-header-sticky .vl-header-action-item i {
+        color: #fff;
+    }
+    #vl-header-sticky .vl-logo img {
+        filter: brightness(0) invert(1);
+    }
+</style>
+
 <div class="space8 d-lg-block d-none"></div>
-<!--=====HEADER END =======-->
 
 <!--===== MOBILE HEADER STARTS =======-->
 <div class="homepage4-body">
@@ -48,17 +64,16 @@
 
 <!--===== HERO AREA STARTS =======-->
 <div class="inner-header-section-area"
-    style="background-image: url(assets/img/all-images/bg/bg9.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
-    <!-- <img src="assets/img/logo/image.png" alt="" class="elements28"> -->
+    style="background-image: url({{ asset('assets/photos/header01.jpg') }}); background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7, 6, 6, 0.55), rgba(4, 3, 3, 0.4)); z-index: 0;"></div>
 
-    <img src="assets/img/elements/elements28.png" alt="" class="elements28">
-    <div class="container">
+    <div class="container" style="position: relative; z-index: 1;">
         <div class="row align-items-center">
             <div class="col-lg-12">
-                <div class="hero-header">
-                    <h1 class="text-anime-style-1">Contact Us</h1>
+                <div class="hero-header" style="color: #fff;">
+                    <h1 class="text-anime-style-1" style="color: #fff;">Contact Us</h1>
                     <div class="space28"></div>
-                    <a href="{{ route('home') }}" class="bradecrumb">Home <i class="fa-solid fa-angle-right"></i>
+                    <a href="{{ route('home') }}" class="bradecrumb" style="color: #fff;">Home <i class="fa-solid fa-angle-right"></i>
                         Contact Us</a>
                 </div>
             </div>

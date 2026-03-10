@@ -7,8 +7,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 
 // });
-Route::get('/', [HomeController::class, 'index'])->name('home');;
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/join-alliance', [HomeController::class, 'contact_form'])->name('join.alliance');
-
-
+Route::view('/about', 'about')->name('about');
