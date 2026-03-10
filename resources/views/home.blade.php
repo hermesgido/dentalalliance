@@ -53,6 +53,23 @@
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35));
             opacity: 1;
         }
+        @media (max-width: 767px) {
+            .hero2-section-area {
+                min-height: 680px;
+            }
+            .hero2-section-area .bg-img,
+            .hero2-section-area .bg-img img {
+                height: 100%;
+            }
+            .hero2-section-area .bg-img img {
+                object-fit: contain !important;
+                object-position: center top;
+                background: #0f172a;
+            }
+            .hero2-section-area .bg-img::after {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.22));
+            }
+        }
     </style>
     <div class="bg-img">
         <img src="{{ asset('assets/photos/header01.jpg') }}" alt style="filter: brightness(0.9) saturate(0.85);">
