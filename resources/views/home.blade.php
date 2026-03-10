@@ -79,7 +79,7 @@
             }
         }
         .hero2-section-area .bg-img::after {
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35));
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.44));
             opacity: 1;
         }
         @media (max-width: 767px) {
@@ -132,7 +132,7 @@
                 display: block;
                 position: absolute;
                 inset: 0;
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.22));
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
                 z-index: 0;
             }
         }
