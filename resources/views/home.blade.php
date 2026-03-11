@@ -265,138 +265,6 @@ performance optimization, and humanitarian impact across Africa.</p>
 </div>
 <!--===== ABOUT AREA ENDS =======-->
 
-<!--===== SERVICE AREA STARTS =======-->
-<div class="service-benefites-section-area sp2"
-    style="background-image: linear-gradient(rgba(8, 14, 28, 0.82), rgba(8, 14, 28, 0.82)), url('{{ asset('assets/photos/header01.jpg') }}'); background-position: center; background-repeat: no-repeat; background-size: cover;">
-    <style>
-        .who-serve-slider .owl-stage {
-            display: flex;
-            align-items: stretch;
-        }
-        .who-serve-item {
-            min-height: 180px;
-            padding: 10px 30px 10px 18px;
-            border-right: 1px solid rgba(148, 163, 184, 0.35);
-            transition: transform 0.25s ease;
-        }
-        .who-serve-item:hover {
-            transform: translateY(-4px);
-        }
-        .who-serve-item .item-top {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            color: #7dd3fc;
-            font-size: 14px;
-            letter-spacing: 0.4px;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-        .who-serve-item .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #38bdf8;
-            box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2);
-        }
-        .who-serve-item .title {
-            display: block;
-            font-size: 34px;
-            line-height: 1.3;
-            font-weight: 700;
-            color: #f8fafc;
-            margin-bottom: 12px;
-            text-decoration: none;
-        }
-        .who-serve-item p {
-            margin: 0;
-            font-size: 20px;
-            line-height: 1.55;
-            color: #cbd5e1;
-        }
-        .who-serve-slider .owl-nav button {
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.45) !important;
-            color: #fff !important;
-            background: rgba(255, 255, 255, 0.08) !important;
-        }
-        .who-serve-slider .owl-nav button:hover {
-            background: #fff !important;
-            color: #0f172a !important;
-        }
-        .who-serve-slider .owl-nav .owl-prev,
-        .who-serve-slider .owl-nav .owl-next {
-            display: none !important;
-        }
-        @media (max-width: 767px) {
-            .who-serve-item {
-                min-height: 150px;
-                padding: 6px 14px 6px 8px;
-                border-right: none;
-                text-align: center;
-            }
-            .who-serve-item .item-top {
-                width: 100%;
-                justify-content: center;
-            }
-            .who-serve-item .title {
-                font-size: 27px;
-            }
-            .who-serve-item p {
-                font-size: 17px;
-            }
-        }
-    </style>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 m-auto">
-                <div class="heading4 text-center space-margin60">
-                    <h5 class="vl-section-subtitle">DA4EA<span> | </span> WHO IS IT
-                        FOR
-                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8"
-                            fill="none">
-                            <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992"
-                                stroke="#02015A" stroke-width="1.5" />
-                        </svg>
-                    </h5>
-                    <div class="space24"></div>
-                    <h2 class="vl-section-title text-anime-style-3" style="color: #fff;">Who We Serve</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="case-slider-area owl-carousel who-serve-slider">
-            <div class="who-serve-item">
-                <span class="item-top"><span class="dot"></span>01</span>
-                <a href="" class="title">Dentists &amp; Specialists</a>
-                <p>Seeking advanced clinical training</p>
-            </div>
-
-            <div class="who-serve-item">
-                <span class="item-top"><span class="dot"></span>02</span>
-                <a href="" class="title">Dental Labs &amp; Industry Partners</a>
-                <p>Expanding into East Africa</p>
-            </div>
-
-            <div class="who-serve-item">
-                <span class="item-top"><span class="dot"></span>03</span>
-                <a href="" class="title">Emerging Professionals</a>
-                <p>Committed to excellence</p>
-            </div>
-
-            <div class="who-serve-item">
-                <span class="item-top"><span class="dot"></span>04</span>
-                <a href="" class="title">Organizations &amp; Sponsors</a>
-                <p>Aligned with long-term impact</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!--===== SERVICE AREA ENDS =======-->
-
 <!--===== WORKS AREA STARTS =======-->
 <!-- <div class="work2-section-area sp2"
       style="background-image: url({{ asset('assets/img/all-images/bg/bg1.png') }}); background-position: center; background-repeat: no-repeat; background-size: cover;"> -->
@@ -559,6 +427,138 @@ performance optimization, and humanitarian impact across Africa.</p>
     </div>
 </div>
 <!--===== PILLARS AREA ENDS =======-->
+
+<!--===== SERVICE AREA STARTS =======-->
+<div class="service-benefites-section-area sp2"
+    style="background-image: linear-gradient(rgba(8, 14, 28, 0.82), rgba(8, 14, 28, 0.82)), url('{{ asset('assets/photos/header01.jpg') }}'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <style>
+        .who-serve-slider .owl-stage {
+            display: flex;
+            align-items: stretch;
+        }
+        .who-serve-item {
+            min-height: 180px;
+            padding: 10px 30px 10px 18px;
+            border-right: 1px solid rgba(148, 163, 184, 0.35);
+            transition: transform 0.25s ease;
+        }
+        .who-serve-item:hover {
+            transform: translateY(-4px);
+        }
+        .who-serve-item .item-top {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: #7dd3fc;
+            font-size: 14px;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .who-serve-item .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #38bdf8;
+            box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2);
+        }
+        .who-serve-item .title {
+            display: block;
+            font-size: 34px;
+            line-height: 1.3;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-bottom: 12px;
+            text-decoration: none;
+        }
+        .who-serve-item p {
+            margin: 0;
+            font-size: 20px;
+            line-height: 1.55;
+            color: #cbd5e1;
+        }
+        .who-serve-slider .owl-nav button {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.45) !important;
+            color: #fff !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+        }
+        .who-serve-slider .owl-nav button:hover {
+            background: #fff !important;
+            color: #0f172a !important;
+        }
+        .who-serve-slider .owl-nav .owl-prev,
+        .who-serve-slider .owl-nav .owl-next {
+            display: none !important;
+        }
+        @media (max-width: 767px) {
+            .who-serve-item {
+                min-height: 150px;
+                padding: 6px 14px 6px 8px;
+                border-right: none;
+                text-align: center;
+            }
+            .who-serve-item .item-top {
+                width: 100%;
+                justify-content: center;
+            }
+            .who-serve-item .title {
+                font-size: 27px;
+            }
+            .who-serve-item p {
+                font-size: 17px;
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 m-auto">
+                <div class="heading4 text-center space-margin60">
+                    <h5 class="vl-section-subtitle">DA4EA<span> | </span> WHO IS IT
+                        FOR
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8"
+                            fill="none">
+                            <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992"
+                                stroke="#02015A" stroke-width="1.5" />
+                        </svg>
+                    </h5>
+                    <div class="space24"></div>
+                    <h2 class="vl-section-title text-anime-style-3" style="color: #fff;">Who We Serve</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-slider-area owl-carousel who-serve-slider">
+            <div class="who-serve-item">
+                <span class="item-top"><span class="dot"></span>01</span>
+                <a href="" class="title">Dentists &amp; Specialists</a>
+                <p>Seeking advanced clinical training</p>
+            </div>
+
+            <div class="who-serve-item">
+                <span class="item-top"><span class="dot"></span>02</span>
+                <a href="" class="title">Dental Labs &amp; Industry Partners</a>
+                <p>Expanding into East Africa</p>
+            </div>
+
+            <div class="who-serve-item">
+                <span class="item-top"><span class="dot"></span>03</span>
+                <a href="" class="title">Emerging Professionals</a>
+                <p>Committed to excellence</p>
+            </div>
+
+            <div class="who-serve-item">
+                <span class="item-top"><span class="dot"></span>04</span>
+                <a href="" class="title">Organizations &amp; Sponsors</a>
+                <p>Aligned with long-term impact</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--===== SERVICE AREA ENDS =======-->
 
 <!--===== SERVICE AREA STARTS =======-->
 <div class="service2-section-area sp2" id="programs"
