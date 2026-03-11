@@ -78,6 +78,28 @@
                 display: none !important;
             }
         }
+        @media (min-width: 992px) {
+            .hero2-section-area .hero-row-center {
+                justify-content: center;
+            }
+            .hero2-section-area .hero-center-desktop {
+                max-width: 860px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .hero2-section-area .hero-center-desktop p {
+                max-width: 760px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero2-section-area .hero-center-desktop .btn-area1 {
+                display: flex;
+                justify-content: center;
+            }
+            .hero2-section-area .hero-right-empty {
+                display: none;
+            }
+        }
         .hero2-section-area .bg-img::after {
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.44));
             opacity: 1;
@@ -150,9 +172,9 @@
     </div>
     <div class="mobile-side-overlay"></div>
     <div class="container" style="position: relative; z-index: 1; color: #fff;">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="hero-header" style="color: #fff;">
+        <div class="row align-items-center hero-row-center">
+            <div class="col-lg-8">
+                <div class="hero-header hero-center-desktop" style="color: #fff;">
                     <h5 data-aos="fade-left" data-aos-duration="800">
                         {{-- <img
                             src="{{ asset('assets/img/icons/sub-logo1.svg') }}" alt>  --}}
@@ -169,7 +191,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6" data-aos="zoom-in-up" data-aos-duration="1000">
+            <div class="col-lg-6 hero-right-empty" data-aos="zoom-in-up" data-aos-duration="1000">
                 <div class="hero2-images">
                     {{-- <img src="{{ asset('assets/img/elements/elements6.png') }}" alt class="elements6"> --}}
                     <div class="img1">
