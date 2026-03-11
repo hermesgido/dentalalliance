@@ -713,10 +713,13 @@ performance optimization, and humanitarian impact across Africa.</p>
             <div class="col-lg-6">
                 <div class="benefites-images">
                     <div class="img1 image-anime reveal">
-                        <img src="{{ asset('assets/img/all-images/works/work-img5.png') }}" alt>
+                                                <img src="{{ asset('assets/photos/people01.jpg') }}" alt>
+
+                        {{-- <img src="{{ asset('assets/img/all-images/works/work-img5.png') }}" alt> --}}
                     </div>
-                    <div class="img2 image-anime reveal">
-                        <img src="{{ asset('assets/img/all-images/works/work-img6.png') }}" alt>
+                    <div class="img2 image-anime reveal"> 
+                                                {{-- <img src="{{ asset('assets/img/all-images/works/work-img6.png') }}" alt> --}}
+                        <img src="{{ asset('assets/photos/people05.jpg') }}" alt>
                     </div>
                 </div>
             </div>
