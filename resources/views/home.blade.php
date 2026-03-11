@@ -364,7 +364,7 @@ performance optimization, and humanitarian impact across Africa.</p>
 <!--===== WORKS AREA STARTS =======-->
 <!-- <div class="work2-section-area sp2"
       style="background-image: url({{ asset('assets/img/all-images/bg/bg1.png') }}); background-position: center; background-repeat: no-repeat; background-size: cover;"> -->
-<div class="work2-section-area sp2"
+{{-- <div class="work2-section-area sp2"
     style="background-image: url({{ asset('assets/img/logo/image.png') }}); background-position: center; background-repeat: no-repeat; background-size: cover;">
     <div class="container">
         <div class="row">
@@ -425,8 +425,104 @@ performance optimization, and humanitarian impact across Africa.</p>
 
         </div>
     </div>
-</div>
+</div> --}}
 <!--===== WORKS AREA ENDS =======-->
+
+<!--===== PILLARS AREA STARTS =======-->
+<div class="about2-section-area sp1" style="background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);">
+    <style>
+        .pillar-heading {
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.08;
+            font-weight: 700;
+            color: #101828;
+        }
+        .pillar-sub {
+            font-size: clamp(18px, 2.1vw, 24px);
+            font-weight: 600;
+            color: #1d4ed8;
+            letter-spacing: 0.2px;
+        }
+        .pillar-card {
+            background: #fff;
+            border: 1px solid #e6edf8;
+            border-radius: 20px;
+            padding: 28px;
+            min-height: 100%;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.14);
+            border-color: #bfd4ff;
+        }
+        .pillar-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1d4ed8 0%, #0f172a 100%);
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+        .pillar-title {
+            display: block;
+            font-size: 28px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 14px;
+        }
+        .pillar-copy {
+            margin: 0;
+            font-size: clamp(17px, 1.9vw, 20px);
+            line-height: 1.5;
+            color: #344054;
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 m-auto">
+                <div class="heading2 text-center space-margin60">
+                    <h2 class="pillar-heading">What We Do </h2>
+                    <div class="space16"></div>
+                    <h4 class="pillar-sub">Education · Innovation · Sustainability</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+                <div class="pillar-card">
+                    <span class="pillar-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <a href="" class="pillar-title">Advanced Dental Training</a>
+                    <p class="pillar-copy">CPD-accredited programs in digital dentistry, implants, prosthetics, aesthetics and dental economics.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="950">
+                <div class="pillar-card">
+                    <span class="pillar-icon"><i class="fa-solid fa-people-arrows-left-right"></i></span>
+                    <a href="" class="pillar-title">Industry &amp; Lab Integration</a>
+                    <p class="pillar-copy">Connecting clinics, labs, suppliers, and manufacturers across Africa and globally.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1100">
+                <div class="pillar-card">
+                    <span class="pillar-icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
+                    <a href="" class="pillar-title">Social Enterprise Model</a>
+                    <p class="pillar-copy">Profits from education directly sustain humanitarian dental care through OwosTanzania.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--===== PILLARS AREA ENDS =======-->
 
 <!--===== SERVICE AREA STARTS =======-->
 <div class="service2-section-area sp2" id="programs"
