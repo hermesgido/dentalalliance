@@ -893,7 +893,8 @@ performance optimization, and humanitarian impact across Africa.</p>
 <!--===== CONTACT AREA ENDS =======-->
 
 <!--===== CTA AREA STARTS =======-->
-<div class="cta4-section-area" style="background-color: #FE4E00">
+<div class="cta4-section-area"
+    style="background-image: linear-gradient(135deg, rgba(254, 78, 0, 0.72), rgba(8, 14, 28, 0.68)), url('{{ asset('assets/photos/hero2.jpeg') }}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
 
     <!-- <div class="cta4-section-area" style="background-image: url({{ asset('assets/img/all-images/bg/bg5.png') }}); background-position: center; background-size: cover; background-repeat: no-repeat;">
      -->
@@ -923,13 +924,13 @@ performance optimization, and humanitarian impact across Africa.</p>
             <div class="col-lg-3"></div>
             <div class="col-lg-4">
                 <div class="cta-circle-area">
-                    <div class="bg1">
+                    {{-- <div class="bg1">
                         <img src="{{ asset('assets/img/all-images/bg/cta-bg1.png') }}" alt=""
                             class="cta-bg1">
                     </div>
                     <div class="img1">
                         <img src="{{ asset('assets/img/all-images/cta/cta-img4.png') }}" alt="">
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
