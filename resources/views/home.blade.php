@@ -189,7 +189,19 @@ performance optimization, and humanitarian impact across Africa.</p>
 <div class="about2-section-area sp1">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 d-none d-md-block">
+
+            <div class="col-lg-6">
+        <div class="about-images-area">
+          <div class="img1 image-anime reveal" style="opacity: 1; visibility: inherit; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+            <img src="assets/photos/people01.jpg" alt="" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+          </div>
+          {{-- <div class="img2">
+            <img src="assets/img/elements/elements18.png" alt="" class="elements18 keyframe5">
+          </div> --}}
+        </div>
+      </div>
+
+            {{-- <div class="col-lg-6 d-none d-md-block">
                 <div class="about2-images-area">
                     
                     <img src="{{ asset('assets/img/elements/elements7.png') }}" alt class="elements7 keyframe5">
@@ -197,14 +209,15 @@ performance optimization, and humanitarian impact across Africa.</p>
                                                 <img src="{{ asset(path: 'assets/photos/search01.jpg') }}" alt>
 
                         {{-- <img src="{{ asset(path: 'assets/img/icons/check3.svg') }}" alt> --}}
-                        <p>With 15+ years of experience
+                        {{-- <p>With 15+ years of experience
                             Medicines Shop community</p>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
-                            <div class="img1 image-anime reveal">
-                                <img src="{{ asset('assets/img/all-images/about/about-img5.png') }}" alt>
-                            </div>
+                            <div class="img1 image-anime reveal">img1
+                             <img src="{{ asset(path: 'assets/photos/img1.png') }}" alt>
+                                {{-- <img src="{{ asset(path: 'assets/img/all-images/about/about-img5.png') }}" alt> --}}
+                            {{-- </div>
                         </div>
 
                         <div class="col-lg-6 col-md-6">
@@ -216,7 +229,8 @@ performance optimization, and humanitarian impact across Africa.</p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
+
             <div class="col-lg-6">
                 <div class="about-heading heading2">
                     <!-- <h5 data-aos="fade-left" data-aos-duration="800"><img src="{{ asset('assets/img/icons/sub-logo1.svg') }}" alt=""> What Is Dental Alliance for East Africa?</h5> -->
@@ -434,7 +448,10 @@ performance optimization, and humanitarian impact across Africa.</p>
             <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-duration="800">
                 <div class="service2-single-boxarea">
                     <div class="img1">
-                      <img src="{{ asset(path: 'assets/photos/people01.jpg') }}" alt>
+                        
+                      {{-- <img src="{{ asset(path: 'assets/photos/people01.jpg') }}" alt> --}}
+                            <img src="{{ asset(path: 'assets/photos/top.jpg') }}" alt>
+
                         {{-- <img src="{{ asset(path: 'assets/img/all-images/service/service-img6.png') }}" alt> --}}
                         <div class="arrow">
                             <a href=""><i class="fa-solid fa-arrow-right"></i></a>
@@ -442,7 +459,8 @@ performance optimization, and humanitarian impact across Africa.</p>
                     </div>
                     <div class="content-area">
                         <div class="icons">
-                            <span><img src="{{ asset('assets/img/icons/service5.svg') }}" alt></span>
+                            <span>
+                                <img src="{{ asset('assets/img/icons/service5.svg') }}" alt></span>
                         </div>
                         <a href="">Digital Dentistry Workflow</a>
                         <div class="space10"></div>
@@ -454,7 +472,8 @@ performance optimization, and humanitarian impact across Africa.</p>
             <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-duration="900">
                 <div class="service2-single-boxarea">
                     <div class="img1">
-                                              <img src="{{ asset(path: 'assets/photos/people2.jpg') }}" alt>
+                                              {{-- <img src="{{ asset(path: 'assets/photos/people2.jpg') }}" alt> --}}
+                            <img src="{{ asset(path: 'assets/photos/top2.jpg') }}" alt>
 
                         {{-- <img src="{{ asset(path: 'assets/img/all-images/service/service-img7.png') }}" alt> --}}
                         <div class="arrow">
@@ -475,7 +494,7 @@ performance optimization, and humanitarian impact across Africa.</p>
             <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-duration="1000">
                 <div class="service2-single-boxarea"> 
                     <div class="img1">
-                       <img src="{{ asset(path: 'assets/photos/people3.jpeg') }}" alt>
+                       <img src="{{ asset(path: 'assets/photos/people01.jpg') }}" alt>
                         {{-- <img src="{{ asset('assets/img/all-images/service/service-img8.png') }}" alt> --}}
                         <div class="arrow">
                             <a href=""><i class="fa-solid fa-arrow-right"></i></a>
