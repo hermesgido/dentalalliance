@@ -16,7 +16,7 @@
     }
     .program-detail-hero {
         background-image: linear-gradient(180deg, rgba(6, 8, 14, 0.72), rgba(6, 8, 14, 0.54)),
-            url('{{ asset('assets/photos/hero2.jpeg') }}');
+            url('{{ asset('assets/photos/hero2.webp') }}');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -266,7 +266,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="program-card-main">
-                        <img src="{{ asset('assets/photos/top.jpg') }}" alt="Digital Dentistry Workflow" class="program-banner">
+                        <img src="{{ asset('assets/photos/top.webp') }}" alt="Digital Dentistry Workflow" class="program-banner">
                         <div class="program-main-content">
                             <h3>Fixed Prosthesis - Digital Workflow Office/Lab Integration</h3>
                             <p class="program-meta">
@@ -373,7 +373,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="program-card-main">
-                        <img src="{{ asset('assets/photos/Copy of dollars.jpeg') }}" alt="Dental Economics" class="program-banner">
+                        <img src="{{ asset('assets/photos/Copy of dollars.webp') }}" alt="Dental Economics" class="program-banner">
                         <div class="program-main-content">
                             <h3>DE Leadership Journey Module 1</h3>
                             <p class="program-meta">

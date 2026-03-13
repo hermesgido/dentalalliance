@@ -16,6 +16,27 @@
     #vl-header-sticky .vl-logo img {
         filter: brightness(0) invert(1);
     }
+    @media (min-width: 992px) {
+        .contact-equal-row {
+            align-items: stretch;
+        }
+        .contact-equal-row > .col-lg-6 {
+            display: flex;
+        }
+        .contact-image-panel.reveal {
+            display: block;
+        }
+        .contact-image-panel,
+        .contact-form-panel {
+            width: 100%;
+            height: 100%;
+        }
+        .contact-image-panel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 </style>
 
 <div class="space8 d-lg-block d-none"></div>
@@ -64,7 +85,7 @@
 
 <!--===== HERO AREA STARTS =======-->
 <div class="inner-header-section-area"
-    style="background-image: url({{ asset('assets/photos/header01.jpg') }}); background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; overflow: hidden;">
+    style="background-image: url({{ asset('assets/photos/header01.webp') }}); background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; overflow: hidden;">
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7, 6, 6, 0.55), rgba(4, 3, 3, 0.4)); z-index: 0;"></div>
 
     <div class="container" style="position: relative; z-index: 1;">
@@ -169,16 +190,19 @@
                     </div>
                 </div>
             </div>
-            <div class="space60"></div>
+        </div>
 
+        <div class="space60"></div>
+
+        <div class="row contact-equal-row">
             <div class="col-lg-6">
-                <div class="images image-anime reveal">
-                    <img src="assets/img/all-images/contact/contact-img3.png" alt="">
+                <div class="images image-anime reveal contact-image-panel">
+                    <img src="assets/photos/contact.webp" alt="">
                 </div>
             </div>
 
             <div class="col-lg-6" data-aos="zoom-in-up" data-aos-duration="1000">
-                <div class="contact-boxarea">
+                <div class="contact-boxarea contact-form-panel">
                     <h4>JOIN THE ALLIANCE</h4>
                     <div class="space20"></div>
                     <p>Join a growing network shaping the future of dentistry in East Africa.
@@ -252,13 +276,9 @@
                     </form>
                 </div>
             </div>
-
-
-
         </div>
     </div>
 </div>
 <!--===== CONTACT AREA ENDS =======-->
-
 
 @include('partials.footer')

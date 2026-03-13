@@ -15,27 +15,27 @@
                 [
                     'title' => 'Digital Dentistry Workflow',
                     'slug' => 'digital-dentistry-workflow',
-                    'image' => 'assets/photos/top.jpg',
+                    'image' => 'assets/photos/top.webp',
                 ],
                 [
                     'title' => 'Implant Surgery & Prosthetics',
                     'slug' => 'implant-surgery-prosthetics',
-                    'image' => 'assets/photos/people2.jpg',
+                    'image' => 'assets/photos/people2.webp',
                 ],
                 [
                     'title' => 'Aesthetic Dentistry & Smile Design',
                     'slug' => 'aesthetic-dentistry-smile-design',
-                    'image' => 'assets/photos/header01.jpg',
+                    'image' => 'assets/photos/header01.webp',
                 ],
                 [
                     'title' => 'Lab-Clinic Integration Programs',
                     'slug' => 'lab-clinic-integration-programs',
-                    'image' => 'assets/photos/team approach2.jpg',
+                    'image' => 'assets/photos/team approach2.webp',
                 ],
                 [
                     'title' => 'Dental Economics',
                     'slug' => 'dental-economics',
-                    'image' => 'assets/photos/Copy of dollars.jpeg',
+                    'image' => 'assets/photos/Copy of dollars.webp',
                 ],
             ],
         ],
@@ -47,12 +47,12 @@
                 [
                     'title' => 'Annual or Biannual DA4EA Summits',
                     'slug' => 'da4ea-summits',
-                    'image' => 'assets/photos/people01.jpg',
+                    'image' => 'assets/photos/people01.webp',
                 ],
                 [
                     'title' => 'Industry-Academic-Clinical Convergence',
                     'slug' => 'industry-academic-clinical-convergence',
-                    'image' => 'assets/photos/people04.jpg',
+                    'image' => 'assets/photos/people04.webp',
                 ],
             ],
         ],
@@ -64,22 +64,22 @@
                 [
                     'title' => 'Universities Training',
                     'slug' => 'universities-training',
-                    'image' => 'assets/photos/teaching.png',
+                    'image' => 'assets/photos/teaching.webp',
                 ],
                 [
                     'title' => 'Hospitals Training',
                     'slug' => 'hospitals-training',
-                    'image' => 'assets/photos/people05.jpg',
+                    'image' => 'assets/photos/people05.webp',
                 ],
                 [
                     'title' => 'NGOs Training',
                     'slug' => 'ngos-training',
-                    'image' => 'assets/photos/Mobilize resources.png',
+                    'image' => 'assets/photos/Mobilize resources.webp',
                 ],
                 [
                     'title' => 'Corporate Partners Training',
                     'slug' => 'corporate-partners-training',
-                    'image' => 'assets/photos/Excellence.png',
+                    'image' => 'assets/photos/Excellence.webp',
                 ],
             ],
         ],
@@ -113,7 +113,7 @@
     }
     .programs-hero {
         position: relative;
-        background-image: linear-gradient(180deg, rgba(10, 10, 10, 0.68), rgba(10, 10, 10, 0.52)), url('{{ asset('assets/photos/header01.jpg') }}');
+        background-image: linear-gradient(180deg, rgba(10, 10, 10, 0.68), rgba(10, 10, 10, 0.52)), url('{{ asset('assets/photos/header01.webp') }}');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

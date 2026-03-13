@@ -160,14 +160,14 @@
         }
     </style>
     <div class="bg-img">
-        <img src="{{ asset('assets/photos/header01.jpg') }}" alt style="filter: brightness(0.9) saturate(0.85);">
+        <img src="{{ asset('assets/photos/header01.webp') }}" alt style="filter: brightness(0.9) saturate(0.85);">
     </div>
     <div class="mobile-edge-images">
         <div class="edge-panel left-panel">
-            <img src="{{ asset('assets/photos/header01.jpg') }}" alt>
+            <img src="{{ asset('assets/photos/header01.webp') }}" alt>
         </div>
         <div class="edge-panel right-panel">
-            <img src="{{ asset('assets/photos/header01.jpg') }}" alt>
+            <img src="{{ asset('assets/photos/header01.webp') }}" alt>
         </div>
     </div>
     <div class="mobile-side-overlay"></div>
@@ -195,7 +195,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                 <div class="hero2-images">
                     {{-- <img src="{{ asset('assets/img/elements/elements6.png') }}" alt class="elements6"> --}}
                     <div class="img1">
-                                                {{-- <img src="{{ asset(path: 'assets/photos/top.jpg') }}" alt> --}}
+                                                {{-- <img src="{{ asset(path: 'assets/photos/top.webp') }}" alt> --}}
 
                         {{-- <img src="{{ asset('assets/img/all-images/hero/hero-img3.png') }}" alt> --}}
                         
@@ -215,7 +215,7 @@ performance optimization, and humanitarian impact across Africa.</p>
             <div class="col-lg-6">
         <div class="about-images-area">
           <div class="img1 image-anime reveal" style="opacity: 1; visibility: inherit; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
-            <img src="assets/photos/people01.jpg" alt="" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+            <img src="assets/photos/people01.webp" alt="" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
           </div>
           {{-- <div class="img2">
             <img src="assets/img/elements/elements18.png" alt="" class="elements18 keyframe5">
@@ -228,7 +228,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                     
                     <img src="{{ asset('assets/img/elements/elements7.png') }}" alt class="elements7 keyframe5">
                     <div class="check-text aniamtion-key-1">
-                                                <img src="{{ asset(path: 'assets/photos/search01.jpg') }}" alt>
+                                                <img src="{{ asset(path: 'assets/photos/search01.webp') }}" alt>
 
                         {{-- <img src="{{ asset(path: 'assets/img/icons/check3.svg') }}" alt> --}}
                         {{-- <p>With 15+ years of experience
@@ -237,7 +237,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="img1 image-anime reveal">img1
-                             <img src="{{ asset(path: 'assets/photos/img1.png') }}" alt>
+                             <img src="{{ asset(path: 'assets/photos/img1.webp') }}" alt>
                                 {{-- <img src="{{ asset(path: 'assets/img/all-images/about/about-img5.png') }}" alt> --}}
                             {{-- </div>
                         </div>
@@ -452,7 +452,7 @@ performance optimization, and humanitarian impact across Africa.</p>
 
 <!--===== SERVICE AREA STARTS =======-->
 <div class="service-benefites-section-area sp2"
-    style="background-image: linear-gradient(rgba(8, 14, 28, 0.82), rgba(8, 14, 28, 0.82)), url('{{ asset('assets/photos/header01.jpg') }}'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    style="background-image: linear-gradient(rgba(8, 14, 28, 0.82), rgba(8, 14, 28, 0.82)), url('{{ asset('assets/photos/header01.webp') }}'); background-position: center; background-repeat: no-repeat; background-size: cover;">
     <style>
         .who-serve-slider .owl-stage {
             display: flex;
@@ -603,8 +603,8 @@ performance optimization, and humanitarian impact across Africa.</p>
                 <div class="service2-single-boxarea">
                     <div class="img1">
                         
-                      {{-- <img src="{{ asset(path: 'assets/photos/people01.jpg') }}" alt> --}}
-                            <img src="{{ asset(path: 'assets/photos/top.jpg') }}" alt>
+                      {{-- <img src="{{ asset(path: 'assets/photos/people01.webp') }}" alt> --}}
+                            <img src="{{ asset(path: 'assets/photos/top.webp') }}" alt>
 
                         {{-- <img src="{{ asset(path: 'assets/img/all-images/service/service-img6.png') }}" alt> --}}
                         <div class="arrow">
@@ -626,8 +626,8 @@ performance optimization, and humanitarian impact across Africa.</p>
             <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-duration="900">
                 <div class="service2-single-boxarea">
                     <div class="img1">
-                                              {{-- <img src="{{ asset(path: 'assets/photos/people2.jpg') }}" alt> --}}
-                            <img src="{{ asset(path: 'assets/photos/top2.jpg') }}" alt>
+                                              {{-- <img src="{{ asset(path: 'assets/photos/people2.webp') }}" alt> --}}
+                            <img src="{{ asset(path: 'assets/photos/top2.webp') }}" alt>
 
                         {{-- <img src="{{ asset(path: 'assets/img/all-images/service/service-img7.png') }}" alt> --}}
                         <div class="arrow">
@@ -648,7 +648,7 @@ performance optimization, and humanitarian impact across Africa.</p>
             <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-duration="1000">
                 <div class="service2-single-boxarea"> 
                     <div class="img1">
-                       <img src="{{ asset(path: 'assets/photos/people01.jpg') }}" alt>
+                       <img src="{{ asset(path: 'assets/photos/people01.webp') }}" alt>
                         {{-- <img src="{{ asset('assets/img/all-images/service/service-img8.png') }}" alt> --}}
                         <div class="arrow">
                             <a href=""><i class="fa-solid fa-arrow-right"></i></a>
@@ -735,13 +735,13 @@ performance optimization, and humanitarian impact across Africa.</p>
             <div class="col-lg-6">
                 <div class="benefites-images">
                     <div class="img1 image-anime reveal">
-                                                <img src="{{ asset('assets/photos/people01.jpg') }}" alt>
+                                                <img src="{{ asset('assets/photos/people01.webp') }}" alt>
 
                         {{-- <img src="{{ asset('assets/img/all-images/works/work-img5.png') }}" alt> --}}
                     </div>
                     <div class="img2 image-anime reveal"> 
                                                 {{-- <img src="{{ asset('assets/img/all-images/works/work-img6.png') }}" alt> --}}
-                        <img src="{{ asset('assets/photos/people05.jpg') }}" alt>
+                        <img src="{{ asset('assets/photos/people05.webp') }}" alt>
                     </div>
                 </div>
             </div>
@@ -832,7 +832,7 @@ performance optimization, and humanitarian impact across Africa.</p>
             <div class="col-lg-6 d-flex">
                 <div class="images image-anime reveal w-100 h-100">
                     {{-- <img src="{{ asset(path: 'assets/img/all-images/contact/contact-img2.png') }}" alt> --}}
-                    <img src="{{ asset(path: 'assets/photos/Neurons1.jpg') }}" alt style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    <img src="{{ asset(path: 'assets/photos/Neurons1.webp') }}" alt style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
                 </div>
             </div>
             <div class="space60"></div>
@@ -916,7 +916,7 @@ performance optimization, and humanitarian impact across Africa.</p>
 
 <!--===== CTA AREA STARTS =======-->
 <div class="cta4-section-area"
-    style="background-image: linear-gradient(135deg, rgba(254, 78, 0, 0.72), rgba(8, 14, 28, 0.68)), url('{{ asset('assets/photos/hero2.jpeg') }}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    style="background-image: linear-gradient(135deg, rgba(254, 78, 0, 0.72), rgba(8, 14, 28, 0.68)), url('{{ asset('assets/photos/hero2.webp') }}'); background-position: center; background-size: cover; background-repeat: no-repeat;">
 
     <!-- <div class="cta4-section-area" style="background-image: url({{ asset('assets/img/all-images/bg/bg5.png') }}); background-position: center; background-size: cover; background-repeat: no-repeat;">
      -->

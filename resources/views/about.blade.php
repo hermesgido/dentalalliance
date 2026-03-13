@@ -165,7 +165,7 @@
 </div>
 
 <div class="inner-header-section-area"
-    style="background-image: url({{ asset('assets/photos/header01.jpg') }}); background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; overflow: hidden;">
+    style="background-image: url({{ asset('assets/photos/header01.webp') }}); background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; overflow: hidden;">
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7, 6, 6, 0.55), rgba(4, 3, 3, 0.4)); z-index: 0;"></div>
     <div class="container" style="position: relative; z-index: 1;">
         <div class="row align-items-center">
