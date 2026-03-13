@@ -40,6 +40,11 @@
         color: #fff !important;
         fill: #fff !important;
       }
+      .vl-main-menu ul li:hover > a,
+      .vl-main-menu ul li.active > a,
+      .vl-main-menu ul li a:hover {
+        color: var(--da4ea-hover-accent) !important;
+      }
     </style>
 
     <!--=====  JS SCRIPT LINK =======-->

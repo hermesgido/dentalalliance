@@ -416,7 +416,7 @@ performance optimization, and humanitarian impact across Africa.</p>
 <!--===== WORKS AREA ENDS =======-->
 
 <!--===== PILLARS AREA STARTS =======-->
-<div class="about2-section-area sp1" style="background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);">
+<div class="about2-section-area sp1" style="background: linear-gradient(180deg, #f7f6f3 0%, #ffffff 100%);">
     <style>
         .pillar-heading {
             font-size: clamp(34px, 5vw, 52px);
@@ -427,12 +427,12 @@ performance optimization, and humanitarian impact across Africa.</p>
         .pillar-sub {
             font-size: clamp(18px, 2.1vw, 24px);
             font-weight: 600;
-            color: #1d4ed8;
+            color: #726e75;
             letter-spacing: 0.2px;
         }
         .pillar-card {
             background: #fff;
-            border: 1px solid #e6edf8;
+            border: 1px solid rgba(114, 110, 117, 0.24);
             border-radius: 20px;
             padding: 28px;
             min-height: 100%;
@@ -442,7 +442,7 @@ performance optimization, and humanitarian impact across Africa.</p>
         .pillar-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 45px rgba(15, 23, 42, 0.14);
-            border-color: #bfd4ff;
+            border-color: #c2ae77;
         }
         .pillar-icon {
             width: 56px;
@@ -451,7 +451,7 @@ performance optimization, and humanitarian impact across Africa.</p>
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #1d4ed8 0%, #0f172a 100%);
+            background: #fe4e00;
             color: #fff;
             font-size: 24px;
             margin-bottom: 18px;
@@ -461,7 +461,7 @@ performance optimization, and humanitarian impact across Africa.</p>
             font-size: 28px;
             line-height: 1.2;
             font-weight: 700;
-            color: #0f172a;
+            color: #101828;
             margin-bottom: 14px;
         }
         .pillar-copy {

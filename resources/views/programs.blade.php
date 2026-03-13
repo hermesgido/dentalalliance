@@ -64,22 +64,22 @@
                 [
                     'title' => 'Universities Training',
                     'slug' => 'universities-training',
-                    'image' => 'assets/photos/teaching.webp',
+                    'image' => 'assets/photos/universityy.webp',
                 ],
                 [
                     'title' => 'Hospitals Training',
                     'slug' => 'hospitals-training',
-                    'image' => 'assets/photos/people05.webp',
+                    'image' => 'assets/photos/universityafcn.webp',
                 ],
                 [
                     'title' => 'NGOs Training',
                     'slug' => 'ngos-training',
-                    'image' => 'assets/photos/Mobilize resources.webp',
+                    'image' => 'assets/photos/ngo.webp',
                 ],
                 [
                     'title' => 'Corporate Partners Training',
                     'slug' => 'corporate-partners-training',
-                    'image' => 'assets/photos/Excellence.webp',
+                    'image' => 'assets/photos/team approach2.webp',
                 ],
             ],
         ],
@@ -207,7 +207,8 @@
     }
     .program-card-cta:hover {
         color: #fff;
-        background: #c2a968;
+        background: #fe4e00;
+        border-color: #fe4e00;
     }
     .program-card-cta.program-card-cta-disabled {
         border-color: #d0d5dd;
@@ -325,25 +326,35 @@
     document.addEventListener('DOMContentLoaded', function () {
         const filterButtons = document.querySelectorAll('.program-filter-btn');
         const programGrids = document.querySelectorAll('.program-grid');
+        const activateCategory = function (targetCategory) {
+            if (!targetCategory) {
+                return;
+            }
+
+            filterButtons.forEach(function (item) {
+                const isTarget = item.dataset.filter === targetCategory;
+                item.classList.toggle('active', isTarget);
+                item.setAttribute('aria-pressed', isTarget ? 'true' : 'false');
+            });
+
+            programGrids.forEach(function (grid) {
+                const isTarget = grid.dataset.category === targetCategory;
+                grid.dataset.visible = isTarget ? 'true' : 'false';
+            });
+        };
 
         filterButtons.forEach(function (button) {
             button.addEventListener('click', function () {
                 const targetCategory = button.dataset.filter;
-
-                filterButtons.forEach(function (item) {
-                    item.classList.remove('active');
-                    item.setAttribute('aria-pressed', 'false');
-                });
-
-                button.classList.add('active');
-                button.setAttribute('aria-pressed', 'true');
-
-                programGrids.forEach(function (grid) {
-                    const isTarget = grid.dataset.category === targetCategory;
-                    grid.dataset.visible = isTarget ? 'true' : 'false';
-                });
+                activateCategory(targetCategory);
+                history.replaceState(null, '', `#${targetCategory}`);
             });
         });
+
+        const hashCategory = window.location.hash.replace('#', '').trim();
+        if (hashCategory) {
+            activateCategory(hashCategory);
+        }
     });
 </script>
 

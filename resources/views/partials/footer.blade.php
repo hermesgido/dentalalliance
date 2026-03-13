@@ -70,9 +70,9 @@ form.addEventListener('submit', function(e) {
             <div class="footer-widget-area foot-padding1">
               <h3>Top Links</h3>
               <ul>
-                <li><a href="">About DA4EA</a></li>
-                <li><a href="#programs">Our Programs</a></li>
-                 <li><a href="#partners">Partners</a></li>
+                <li><a href="{{ route('about') }}">About DA4EA</a></li>
+                <li><a href="{{ route('programs.index') }}">Our Programs</a></li>
+                <li><a href="{{ route('home') }}#partners">Partners</a></li>
                 <li><a href="{{ route('contact') }}">Contact Us</a></li>
                 <li><a href="{{ url('/docs/%F0%9F%94%90%20PRIVACY%20POLICY.pdf') }}" target="_blank" rel="noopener">Privacy Policy</a></li>
 
@@ -86,9 +86,9 @@ form.addEventListener('submit', function(e) {
             <div class="footer-widget-area foot-padding2">
               <h3>Programs</h3>
               <ul>
-                <li><a href="#">Digital Dentistry Workflow</a></li>
-                <li><a href="#">Implant-Based Master Program</a></li>
-                <li><a href="#">Aesthetics & Smile Design</a></li>
+                <li><a href="{{ route('programs.index') }}#advanced-clinical-training">Advanced Clinical Training</a></li>
+                <li><a href="{{ route('programs.index') }}#conferences-flagship-events">Conferences &amp; Flagship Events</a></li>
+                <li><a href="{{ route('programs.index') }}#custom-institutional-training">Custom &amp; Institutional Training</a></li>
               </ul>
             </div>
           </div>
