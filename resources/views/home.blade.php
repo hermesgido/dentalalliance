@@ -766,7 +766,7 @@ performance optimization, and humanitarian impact across Africa.</p>
 
             <div class="col-lg-6" data-aos="zoom-in-up" data-aos-duration="1000">
                 <div class="contact-boxarea">
-                    <h4>book An Appointment</h4>
+                    <h4>Get More Info</h4>
                     <div class="space20"></div>
                     <p>Join a growing network shaping the future of dentistry in East Africa.
                         <br class="d-lg-block d-none">in East Africa.

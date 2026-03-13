@@ -76,7 +76,7 @@
                       <a href="{{ route('home') }}">Home <span class="arrow-size">
                     </li>
                     <li class="has-dropdown">
-                      <a href="#programs">Programs <span class="arrow-size">
+                      <a href="{{ route('programs.index') }}">Programs <span class="arrow-size">
                     </li>
                     <li><a href="{{ route('about') }}">About Us <span class="arrow-size"></span></a>
                     </li>
