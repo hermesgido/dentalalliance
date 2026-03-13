@@ -84,6 +84,17 @@
             ],
         ],
     ];
+
+    $programCategories = array_map(function (array $category) use ($availableProgramSlugs): array {
+        usort($category['items'], function (array $first, array $second) use ($availableProgramSlugs): int {
+            $firstAvailable = in_array($first['slug'], $availableProgramSlugs, true);
+            $secondAvailable = in_array($second['slug'], $availableProgramSlugs, true);
+
+            return $secondAvailable <=> $firstAvailable;
+        });
+
+        return $category;
+    }, $programCategories);
 @endphp
 
 <style>
@@ -183,22 +194,39 @@
         color: #111827;
         margin-bottom: 12px;
     }
+    .program-card-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid #c2a968;
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-weight: 600;
+        color: #9b7b35;
+        background: #fff;
+    }
+    .program-card-cta:hover {
+        color: #fff;
+        background: #c2a968;
+    }
+    .program-card-cta.program-card-cta-disabled {
+        border-color: #d0d5dd;
+        color: #98a2b3;
+        background: #f9fafb;
+        cursor: not-allowed;
+    }
     .program-card-link {
         font-weight: 600;
         color: #9b7b35;
     }
     .program-card.program-card-disabled {
-        opacity: 0.68;
-        cursor: not-allowed;
-        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+        opacity: 1;
+        cursor: default;
     }
     .program-card.program-card-disabled:hover {
         transform: none;
         border-color: #e7edf7;
-        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
-    }
-    .program-card-disabled .program-card-link {
-        color: #98a2b3;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
     }
     .program-grid[data-visible="false"] {
         display: none;
@@ -270,23 +298,21 @@
                             $isAvailable = in_array($program['slug'], $availableProgramSlugs, true);
                         @endphp
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="900">
-                            @if ($isAvailable)
-                                <a href="{{ route('programs.show', ['slug' => $program['slug']]) }}" class="program-card">
-                                    <img class="program-card-image" src="{{ asset($program['image']) }}" alt="{{ $program['title'] }}">
-                                    <div class="program-card-body">
-                                        <h4 class="program-card-title">{{ $program['title'] }}</h4>
-                                        <span class="program-card-link">View Program Details <i class="fa-solid fa-arrow-right"></i></span>
-                                    </div>
-                                </a>
-                            @else
-                                <div class="program-card program-card-disabled" aria-disabled="true">
-                                    <img class="program-card-image" src="{{ asset($program['image']) }}" alt="{{ $program['title'] }}">
-                                    <div class="program-card-body">
-                                        <h4 class="program-card-title">{{ $program['title'] }}</h4>
-                                        <span class="program-card-link">View Program Details (Coming Soon)</span>
-                                    </div>
+                            <div class="program-card {{ $isAvailable ? '' : 'program-card-disabled' }}" aria-disabled="{{ $isAvailable ? 'false' : 'true' }}">
+                                <img class="program-card-image" src="{{ asset($program['image']) }}" alt="{{ $program['title'] }}">
+                                <div class="program-card-body">
+                                    <h4 class="program-card-title">{{ $program['title'] }}</h4>
+                                    @if ($isAvailable)
+                                        <a href="{{ route('programs.show', ['slug' => $program['slug']]) }}" class="program-card-cta">
+                                            View Program Details <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    @else
+                                        <button type="button" class="program-card-cta program-card-cta-disabled" disabled>
+                                            View Program Details
+                                        </button>
+                                    @endif
                                 </div>
-                            @endif
+                            </div>
                         </div>
                     @endforeach
                 </div>

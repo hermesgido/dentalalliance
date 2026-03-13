@@ -72,11 +72,11 @@
               <div class="vl-main-menu text-center">
                 <nav class="vl-mobile-menu-active">
                   <ul>
-                    <li class="has-dropdown">
-                      <a href="{{ route('home') }}">Home <span class="arrow-size">
+                    <li>
+                      <a href="{{ route('home') }}">Home <span class="arrow-size"></span></a>
                     </li>
-                    <li class="has-dropdown">
-                      <a href="{{ route('programs.index') }}">Programs <span class="arrow-size">
+                    <li>
+                      <a href="{{ route('programs.index') }}">Programs <span class="arrow-size"></span></a>
                     </li>
                     <li><a href="{{ route('about') }}">About Us <span class="arrow-size"></span></a>
                     </li>
