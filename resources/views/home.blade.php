@@ -49,6 +49,58 @@
 <!--===== HERO AREA STARTS =======-->
 <div class="hero2-section-area sp1" style="position: relative; overflow: hidden;">
     <style>
+        .hero2-section-area .hero-cta-wrap {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .hero2-section-area .hero-header h5 {
+            color: #8f8a92 !important;
+            letter-spacing: 0.08em;
+        }
+        .hero2-section-area .hero-header h1 {
+            color: #f1ede4 !important;
+        }
+        .hero2-section-area .hero-header p {
+            color: #b9b4bc !important;
+            opacity: 1;
+        }
+        .hero2-section-area .hero-cta-primary .text {
+            background: #c2ae77 !important;
+            border: 1px solid #c2ae77 !important;
+            color: #ffffff !important;
+        }
+        .hero2-section-area .hero-cta-primary .text i {
+            color: #ffffff !important;
+        }
+        .hero2-section-area .hero-cta-primary .text::after {
+            background: #fe4e00 !important;
+        }
+        .hero2-section-area .hero-cta-secondary {
+            background: transparent !important;
+        }
+        .hero2-section-area .hero-cta-secondary .text {
+            background: rgba(114, 110, 117, 0.14) !important;
+            border: 1px solid #fe4e00 !important;
+            color: #fe4e00 !important;
+        }
+        .hero2-section-area .hero-cta-secondary .text::after {
+            background: #fe4e00 !important;
+        }
+        .hero2-section-area .hero-cta-secondary i {
+            color: #fe4e00 !important;
+        }
+        .hero2-section-area .hero-cta-secondary:hover {
+            background: transparent !important;
+        }
+        .hero2-section-area .hero-cta-secondary:hover .text {
+            background: rgba(254, 78, 0, 0.2) !important;
+            border-color: #fe4e00 !important;
+            color: #ffffff !important;
+        }
+        .hero2-section-area .hero-cta-secondary:hover i {
+            color: #ffffff !important;
+        }
         .hero2-section-area .bg-img {
             position: absolute;
             inset: 0;
@@ -180,14 +232,16 @@
                             src="{{ asset('assets/img/icons/sub-logo1.svg') }}" alt>  --}}
                             Dental Leadership Platform for Africa.</h5>
                     <div class="space18"></div>
-                    <h1 class="text-anime-style-1" style="color: #fff;">Based in Tanzania. Built for Africa - Building Capacity</h1>
+                    <h1 class="text-anime-style-1">Based in Tanzania. Built for Africa - Building Capacity</h1>
                     <div class="space20"></div>
-                    <p data-aos="fade-left" data-aos-duration="1000" style="color: #f1f1f1;">A leadership-driven platform advancing clinical excellence, structured education,
+                    <p data-aos="fade-left" data-aos-duration="1000">A leadership-driven platform advancing clinical excellence, structured education,
 performance optimization, and humanitarian impact across Africa.</p>
                     <div class="space28"></div>
-                    <div class="btn-area1">
-                        <a href="{{ route('contact') }}" class="vl-btn2"><span class="text">Join
-                                the Dental Alliance <i class="fa-solid fa-arrow-right"></i></span></a>
+                    <div class="btn-area1 hero-cta-wrap">
+                        <a href="{{ route('programs.index') }}" class="vl-btn2 hero-cta-primary"><span class="text">Explore
+                                Programs <i class="fa-solid fa-arrow-right"></i></span></a>
+                        <a href="{{ route('contact') }}" class="vl-btn2 hero-cta-secondary"><span class="text">Partner
+                                With Us <i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                 </div>
             </div>
@@ -583,7 +637,7 @@ performance optimization, and humanitarian impact across Africa.</p>
 <!--===== SERVICE AREA ENDS =======-->
 
 <!--===== SERVICE AREA STARTS =======-->
-<div class="service2-section-area sp2" id="programs"
+{{-- <div class="service2-section-area sp2" id="programs"
     style="background-image: url({{ asset('assets/img/all-images/bg/bg2.png') }}); background-position: center; background-size: cover; background-repeat: no-repeat;">
     <div class="container">
         <div class="row">
@@ -603,10 +657,8 @@ performance optimization, and humanitarian impact across Africa.</p>
                 <div class="service2-single-boxarea">
                     <div class="img1">
                         
-                      {{-- <img src="{{ asset(path: 'assets/photos/people01.webp') }}" alt> --}}
                             <img src="{{ asset(path: 'assets/photos/top.webp') }}" alt>
 
-                        {{-- <img src="{{ asset(path: 'assets/img/all-images/service/service-img6.png') }}" alt> --}}
                         <div class="arrow">
                             <a href=""><i class="fa-solid fa-arrow-right"></i></a>
                         </div>
@@ -626,10 +678,8 @@ performance optimization, and humanitarian impact across Africa.</p>
             <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-duration="900">
                 <div class="service2-single-boxarea">
                     <div class="img1">
-                                              {{-- <img src="{{ asset(path: 'assets/photos/people2.webp') }}" alt> --}}
                             <img src="{{ asset(path: 'assets/photos/top2.webp') }}" alt>
 
-                        {{-- <img src="{{ asset(path: 'assets/img/all-images/service/service-img7.png') }}" alt> --}}
                         <div class="arrow">
                             <a href=""><i class="fa-solid fa-arrow-right"></i></a>
                         </div>
@@ -649,7 +699,6 @@ performance optimization, and humanitarian impact across Africa.</p>
                 <div class="service2-single-boxarea"> 
                     <div class="img1">
                        <img src="{{ asset(path: 'assets/photos/people01.webp') }}" alt>
-                        {{-- <img src="{{ asset('assets/img/all-images/service/service-img8.png') }}" alt> --}}
                         <div class="arrow">
                             <a href=""><i class="fa-solid fa-arrow-right"></i></a>
                         </div>
@@ -662,19 +711,6 @@ performance optimization, and humanitarian impact across Africa.</p>
                         <div class="space10"></div>
                         <p>Zanzibar</p>
 
-                        <!-- <a href="" class="readmore" >
-                Get Early Access
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <g clip-path="url(#clip0_5927_10805)">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 0.833008C4.04188 0.833008 0.833252 4.04163 0.833252 7.99967C0.833252 11.9577 4.04188 15.1663 7.99992 15.1663C11.958 15.1663 15.1666 11.9577 15.1666 7.99967C15.1666 4.04163 11.958 0.833008 7.99992 0.833008ZM7.33325 5.33301C7.06359 5.33301 6.82052 5.49543 6.71732 5.74455C6.61415 5.99367 6.67119 6.28042 6.86185 6.47108L7.72379 7.33301L5.52851 9.52827C5.26817 9.78861 5.26817 10.2107 5.52851 10.4711C5.78887 10.7314 6.21097 10.7314 6.47133 10.4711L8.66659 8.27581L9.52852 9.13774C9.71919 9.32841 10.0059 9.38547 10.2551 9.28227C10.5042 9.17907 10.6666 8.93601 10.6666 8.66634V5.99967C10.6666 5.63149 10.3681 5.33301 9.99992 5.33301H7.33325Z" fill="#4416FF"/>
-                </g>
-                <defs>
-                  <clipPath id="clip0_5927_108051">
-                    <rect width="16" height="16" fill="white"/>
-                  </clipPath>
-                </defs>
-              </svg>
-            </a> -->
 
                     </div>
                 </div>
@@ -687,61 +723,130 @@ performance optimization, and humanitarian impact across Africa.</p>
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!--===== SERVICE AREA ENDS =======-->
 
 <!--===== WORKS AREA STARTS =======-->
 <div class="benefites-section-area sp1" id="partners">
+    <style>
+        #partners {
+            background: linear-gradient(180deg, #000000 0%, #111111 100%);
+        }
+        #partners .partners-modern-shell {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none;
+        }
+        #partners .heading2 h2,
+        #partners .heading2 p,
+        #partners .heading2 .bg-progress label {
+            color: #f2f2f2;
+        }
+        #partners .heading2 .bg-progress .progress {
+            background: rgba(114, 110, 117, 0.42);
+        }
+        #partners .heading2 .bg-progress .progress-inner {
+            background: #c2ae77;
+        }
+        #partners .partners-modern-row {
+            align-items: center;
+        }
+        #partners .partners-single-image {
+            position: relative;
+            max-width: 560px;
+            margin-left: auto;
+        }
+        #partners .partners-single-image::before {
+            content: "";
+            position: absolute;
+            left: -28px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(194, 169, 104, 0.3) 0%, rgba(194, 169, 104, 0) 72%);
+            pointer-events: none;
+        }
+        #partners .partners-single-image .img1 {
+            text-align: right;
+        }
+        #partners .partners-single-image .img1 img {
+            width: 100%;
+            max-width: 540px;
+            height: 430px;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid rgba(114, 110, 117, 0.55);
+            box-shadow: 0 16px 35px rgba(15, 23, 42, 0.14);
+        }
+        @media (max-width: 991px) {
+            #partners .partners-modern-shell {
+                padding: 0;
+            }
+            #partners .partners-single-image {
+                margin: 26px auto 0;
+            }
+            #partners .partners-single-image::before {
+                display: none;
+            }
+            #partners .partners-single-image .img1 img {
+                max-width: 100%;
+                height: 320px;
+                border-radius: 12px;
+            }
+        }
+    </style>
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5">
-                <div class="heading2">
+        <div class="partners-modern-shell">
+            <div class="row partners-modern-row">
+                <div class="col-lg-6">
+                    <div class="heading2">
                     <!-- <h5 data-aos="fade-left" data-aos-duration="800"><img
                   src="{{ asset('assets/img/icons/sub-logo1.svg') }}" alt>PARTNERS & COLLABORATORS</h5> -->
-                    <div class="space20"></div>
-                    <h2 class="text-anime-style-3 "> Partners & Collabotators</h2>
-                    <div class="space18"></div>
-                    <p data-aos="fade-left" data-aos-duration="1000">DA4EA collaborates with leading:</p>
-                    <div class="space28"></div>
-                    <div class="bg-progress" data-aos="fade-left" data-aos-duration="900">
-                        <div class="progress-bar">
-                            <label>Dental laboratories</label>
-                            <div class="progress">
-                                <div class="progress-inner" style="width:100%;"></div>
+                        <div class="space20"></div>
+                        <h2 class="text-anime-style-3 "> Partners & Collabotators</h2>
+                        <div class="space18"></div>
+                        <p data-aos="fade-left" data-aos-duration="1000">DA4EA collaborates with leading:</p>
+                        <div class="space28"></div>
+                        <div class="bg-progress" data-aos="fade-left" data-aos-duration="900">
+                            <div class="progress-bar">
+                                <label>Dental laboratories</label>
+                                <div class="progress">
+                                    <div class="progress-inner" style="width:100%;"></div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="progress-bar" style="margin: 0;">
-                            <label>Education institutes </label>
-                            <div class="progress">
-                                <div class="progress-inner" style="width: 100%;"></div>
+                            <div class="progress-bar" style="margin: 0;">
+                                <label>Education institutes </label>
+                                <div class="progress">
+                                    <div class="progress-inner" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                            <div class="progress-bar" style="margin: 0;">
+                                <label>Industry innovators</label>
+                                <div class="progress">
+                                    <div class="progress-inner" style="width: 100%;"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="progress-bar" style="margin: 0;">
-                            <label>Industry innovators</label>
-                            <div class="progress">
-                                <div class="progress-inner" style="width: 100%;"></div>
-                            </div>
+                        <div class="space32"></div>
+                        <div class="btn-area1" data-aos="fade-left" data-aos-duration="1200">
+                            <a href="{{ route('contact') }}" class="vl-btn2"><span class="text">Partner With Us <i
+                                        class="fa-solid fa-arrow-right"></i></span></a>
                         </div>
-                    </div>
-                    <div class="space32"></div>
-                    <div class="btn-area1" data-aos="fade-left" data-aos-duration="1200">
-                        <a href="{{ route('contact') }}" class="vl-btn2"><span class="text">Partner With Us <i
-                                    class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-1"></div>
-            <div class="col-lg-6">
-                <div class="benefites-images">
-                    <div class="img1 image-anime reveal">
-                                                <img src="{{ asset('assets/photos/people01.webp') }}" alt>
+                <div class="col-lg-6">
+                    <div class="benefites-images partners-single-image">
+                        <div class="img1 image-anime reveal">
+                                                <img src="{{ asset('assets/photos/team1001.webp') }}" alt>
 
-                        {{-- <img src="{{ asset('assets/img/all-images/works/work-img5.png') }}" alt> --}}
-                    </div>
-                    <div class="img2 image-anime reveal"> 
-                                                {{-- <img src="{{ asset('assets/img/all-images/works/work-img6.png') }}" alt> --}}
-                        <img src="{{ asset('assets/photos/people05.webp') }}" alt>
+                            {{-- <img src="{{ asset('assets/img/all-images/works/work-img5.png') }}" alt> --}}
+                        </div>
                     </div>
                 </div>
             </div>
