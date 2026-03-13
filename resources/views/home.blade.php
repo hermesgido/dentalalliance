@@ -736,26 +736,12 @@ performance optimization, and humanitarian impact across Africa.</p>
 <!--===== WORKS AREA STARTS =======-->
 <div class="benefites-section-area sp1" id="partners">
     <style>
-        #partners {
-            background: linear-gradient(180deg, #000000 0%, #111111 100%);
-        }
         #partners .partners-modern-shell {
             background: transparent;
             border: none;
             border-radius: 0;
             padding: 0;
             box-shadow: none;
-        }
-        #partners .heading2 h2,
-        #partners .heading2 p,
-        #partners .heading2 .bg-progress label {
-            color: #f2f2f2;
-        }
-        #partners .heading2 .bg-progress .progress {
-            background: rgba(114, 110, 117, 0.42);
-        }
-        #partners .heading2 .bg-progress .progress-inner {
-            background: #c2ae77;
         }
         #partners .partners-modern-row {
             align-items: center;
