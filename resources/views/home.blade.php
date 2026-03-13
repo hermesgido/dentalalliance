@@ -98,6 +98,13 @@
             border-color: #fe4e00 !important;
             color: #ffffff !important;
         }
+        .hero2-section-area .hero-cta-wrap .vl-btn2:hover .text {
+            color: #ffffff !important;
+            border-color: #fe4e00 !important;
+        }
+        .hero2-section-area .hero-cta-wrap .vl-btn2:hover .text i {
+            color: #ffffff !important;
+        }
         .hero2-section-area .hero-cta-secondary:hover i {
             color: #ffffff !important;
         }

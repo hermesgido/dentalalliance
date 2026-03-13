@@ -188,6 +188,11 @@
         color: #fff;
         padding: 11px 16px;
         font-weight: 600;
+        transition: all 0.25s ease;
+    }
+    .program-side-btn:hover {
+        background: #fe4e00;
+        color: #fff;
     }
     .program-map-box {
         margin-top: 24px;

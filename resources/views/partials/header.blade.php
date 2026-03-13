@@ -22,6 +22,26 @@
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/swiper-bundle.css')  }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css')  }}">
 
+    <style>
+      :root {
+        --da4ea-hover-accent: #FE4E00;
+      }
+      .vl-btn2 .text::after,
+      .vl-btn4::after {
+        background: var(--da4ea-hover-accent) !important;
+      }
+      .vl-btn2 .text:hover,
+      .vl-btn4:hover {
+        color: #fff !important;
+      }
+      .vl-btn2 .text:hover i,
+      .vl-btn4:hover i,
+      .vl-btn4:hover svg {
+        color: #fff !important;
+        fill: #fff !important;
+      }
+    </style>
+
     <!--=====  JS SCRIPT LINK =======-->
     <script src="{{ asset('assets/js/plugins/jquery-3-7-1.min.js')  }}"></script>
   </head>
