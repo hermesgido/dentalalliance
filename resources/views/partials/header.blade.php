@@ -25,6 +25,15 @@
     <style>
       :root {
         --da4ea-hover-accent: #FE4E00;
+        --da4ea-logo-width-desktop: 205px;
+        --da4ea-logo-width-tablet: 188px;
+        --da4ea-logo-width-mobile: 168px;
+        --da4ea-logo-width-offcanvas: 190px;
+        --da4ea-logo-bottom-pull-desktop: -24px;
+        --da4ea-logo-bottom-pull-tablet: -22px;
+        --da4ea-logo-bottom-pull-mobile: -18px;
+        --da4ea-logo-bottom-pull-offcanvas: -20px;
+        --da4ea-logo-width-footer: 210px;
       }
       .vl-btn2 .text::after,
       .vl-btn4::after {
@@ -44,6 +53,74 @@
       .vl-main-menu ul li.active > a,
       .vl-main-menu ul li a:hover {
         color: var(--da4ea-hover-accent) !important;
+      }
+      .homepage2-body .vl-transparent-header {
+        padding: 12px 0 !important;
+      }
+      .vl-logo,
+      .vl-logo a {
+        display: inline-flex;
+        align-items: flex-start;
+      }
+      .vl-logo img,
+      #vl-header-sticky .vl-logo img,
+      .homepage2-body .vl-transparent-header .vl-logo img {
+        width: var(--da4ea-logo-width-desktop) !important;
+        height: auto !important;
+        max-width: 100%;
+        max-height: none !important;
+        object-fit: contain;
+        display: block;
+        margin-bottom: var(--da4ea-logo-bottom-pull-desktop);
+      }
+      .vl-offcanvas .vl-offcanvas-logo,
+      .homepage2-body .vl-offcanvas .vl-offcanvas-logo {
+        width: auto !important;
+        height: auto !important;
+      }
+      .vl-offcanvas .vl-offcanvas-logo img,
+      .homepage2-body .vl-offcanvas .vl-offcanvas-logo img {
+        width: var(--da4ea-logo-width-offcanvas);
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+        display: block;
+        margin-bottom: var(--da4ea-logo-bottom-pull-offcanvas);
+      }
+      .footer-widget-area img[src*="logo1.png"] {
+        width: var(--da4ea-logo-width-footer);
+        height: auto !important;
+        max-width: 100%;
+        object-fit: contain;
+        display: block;
+      }
+      .program-meta img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+      }
+      @media (max-width: 991px) {
+        .vl-logo img,
+        #vl-header-sticky .vl-logo img,
+        .homepage2-body .vl-transparent-header .vl-logo img {
+          width: var(--da4ea-logo-width-tablet) !important;
+          margin-bottom: var(--da4ea-logo-bottom-pull-tablet);
+        }
+      }
+      @media (max-width: 767px) {
+        .homepage2-body .vl-transparent-header {
+          padding: 10px 0 !important;
+        }
+        .vl-logo img,
+        #vl-header-sticky .vl-logo img,
+        .homepage2-body .vl-transparent-header .vl-logo img {
+          width: var(--da4ea-logo-width-mobile) !important;
+          margin-bottom: var(--da4ea-logo-bottom-pull-mobile);
+        }
+        .vl-offcanvas .vl-offcanvas-logo,
+        .homepage2-body .vl-offcanvas .vl-offcanvas-logo {
+          width: auto !important;
+        }
       }
     </style>
 
@@ -80,20 +157,14 @@
     <header class="homepage2-body">
       <div id="vl-header-sticky" class="vl-header-area vl-transparent-header">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-
-            </div>
-            <div class="space16 d-lg-block d-none"></div>
-          </div>
           <div class="row align-items-center">
-            <div class="col-lg-2 col-md-6 col-6">
+            <div class="col-lg-3 col-md-6 col-6">
               <div class="vl-logo">
                 <a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo/logo1.png')  }}"
-                    with="20" height="0" alt></a>
+                    alt="Dental Alliance for East Africa logo"></a>
               </div>
             </div>
-            <div class="col-lg-8 d-none d-lg-block">
+            <div class="col-lg-7 d-none d-lg-block">
               <div class="vl-main-menu text-center">
                 <nav class="vl-mobile-menu-active">
                   <ul>

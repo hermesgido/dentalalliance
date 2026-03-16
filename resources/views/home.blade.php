@@ -1,6 +1,5 @@
 @include('partials.header')
 
-<div class="space8 d-lg-block d-none"></div>
 <!--=====HEADER END =======-->
 
 <!--===== MOBILE HEADER STARTS =======-->
