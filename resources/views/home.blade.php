@@ -511,6 +511,167 @@ performance optimization, and humanitarian impact across Africa.</p>
 </div>
 <!--===== PILLARS AREA ENDS =======-->
 
+<!--===== DIGITAL IMPLANT SPOTLIGHT STARTS =======-->
+<div class="about2-section-area sp1" style="background: linear-gradient(180deg, #ffffff 0%, #f7f6f3 100%);">
+    <style>
+        .implant-spotlight-shell {
+            background: #0f172a;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 28px 60px rgba(15, 23, 42, 0.18);
+        }
+        .implant-spotlight-copy {
+            padding: 56px 52px;
+            color: #e2e8f0;
+        }
+        .implant-spotlight-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #7dd3fc;
+        }
+        .implant-spotlight-eyebrow .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #fe4e00;
+            box-shadow: 0 0 0 6px rgba(254, 78, 0, 0.14);
+        }
+        .implant-spotlight-title {
+            margin: 18px 0 18px;
+            font-size: clamp(28px, 3.8vw, 42px);
+            line-height: 1.08;
+            color: #f8fafc;
+        }
+        .implant-spotlight-copy p {
+            margin: 0;
+            font-size: 19px;
+            line-height: 1.7;
+            color: #cbd5e1;
+        }
+        .implant-spotlight-points {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px 20px;
+            margin: 28px 0 34px;
+            padding: 0;
+            list-style: none;
+        }
+        .implant-spotlight-points li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 17px;
+            line-height: 1.5;
+            color: #e2e8f0;
+        }
+        .implant-spotlight-points i {
+            color: #fe4e00;
+        }
+        .implant-spotlight-cta {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .implant-spotlight-cta .vl-btn2 .text {
+            border-color: transparent;
+        }
+        .implant-spotlight-secondary .text {
+            background: transparent !important;
+            border: 1px solid rgba(255, 255, 255, 0.22) !important;
+            color: #f8fafc !important;
+        }
+        .implant-spotlight-secondary .text::after {
+            background: #fe4e00 !important;
+        }
+        .implant-spotlight-secondary i {
+            color: #f8fafc !important;
+        }
+        .implant-spotlight-image-wrap {
+            position: relative;
+            height: 100%;
+            min-height: 100%;
+            background: radial-gradient(circle at top left, rgba(125, 211, 252, 0.18), transparent 34%), #020617;
+        }
+        .implant-spotlight-image-wrap::before {
+            content: "";
+            position: absolute;
+            inset: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .implant-spotlight-image-wrap img {
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        @media (max-width: 991px) {
+            .implant-spotlight-copy {
+                padding: 40px 28px;
+            }
+            .implant-spotlight-points {
+                grid-template-columns: 1fr;
+            }
+            .implant-spotlight-image-wrap {
+                min-height: 420px;
+            }
+            .implant-spotlight-image-wrap::before {
+                inset: 18px;
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="implant-spotlight-shell">
+            <div class="row g-0 align-items-stretch">
+                <div class="col-lg-6">
+                    <div class="implant-spotlight-copy">
+                        <span class="implant-spotlight-eyebrow">
+                            <span class="dot"></span>
+                            Digital Implant Workflow
+                        </span>
+                        <h2 class="implant-spotlight-title">Technical competence and systems integration for modern implant workflows</h2>
+                        <p>Now your implant and digital visuals live here.</p>
+                        <ul class="implant-spotlight-points">
+                            <li><i class="fa-solid fa-check"></i> Technical Competence</li>
+                            <li><i class="fa-solid fa-check"></i> Clinical execution</li>
+                            <li><i class="fa-solid fa-check"></i> Workflow mastery</li>
+                            <li><i class="fa-solid fa-check"></i> Digital integration</li>
+                            <li><i class="fa-solid fa-check"></i> Communication precision</li>
+                            <li><i class="fa-solid fa-check"></i> Systems Integration</li>
+                            <li><i class="fa-solid fa-check"></i> Treatment planning logic</li>
+                            <li><i class="fa-solid fa-check"></i> Clinic workflow architecture</li>
+                            <li><i class="fa-solid fa-check"></i> Interdisciplinary collaboration</li>
+                            <li><i class="fa-solid fa-check"></i> Field deployment readiness</li>
+                        </ul>
+                        <div class="implant-spotlight-cta">
+                            <a href="{{ route('programs.index') }}" class="vl-btn2">
+                                <span class="text">Explore Programs <i class="fa-solid fa-arrow-right"></i></span>
+                            </a>
+                            <a href="{{ route('contact') }}" class="vl-btn2 implant-spotlight-secondary">
+                                <span class="text">Discuss Partnership <i class="fa-solid fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="implant-spotlight-image-wrap">
+                        <img src="{{ asset('assets/photos/digimage.jpeg') }}" alt="Digital implant workflow visualization">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--===== DIGITAL IMPLANT SPOTLIGHT ENDS =======-->
+
 <!--===== SERVICE AREA STARTS =======-->
 <div class="service-benefites-section-area sp2"
     style="background-image: linear-gradient(rgba(8, 14, 28, 0.82), rgba(8, 14, 28, 0.82)), url('{{ asset('assets/photos/header01.webp') }}'); background-position: center; background-repeat: no-repeat; background-size: cover;">
