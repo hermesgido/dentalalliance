@@ -38,7 +38,10 @@
                             <div style="border: 1px solid #eadfbc; border-radius: 18px; padding: 18px 20px; background: #fcfaf4;">
                                 <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: #8b7b4b; margin-bottom: 8px;">Lead</div>
                                 <div style="font-size: 24px; line-height: 1.25; font-weight: 700; color: #111827;">{{ $allianceMember->full_name }}</div>
-                                <div style="font-size: 15px; line-height: 1.6; color: #475467; margin-top: 6px;">{{ $allianceMember->role }} from {{ $allianceMember->country }}</div>
+                                <div style="font-size: 15px; line-height: 1.7; color: #475467; margin-top: 8px;">
+                                    <div><strong style="color: #111827;">Role:</strong> {{ $allianceMember->role }}</div>
+                                    <div><strong style="color: #111827;">Country:</strong> {{ $allianceMember->country }}</div>
+                                </div>
                             </div>
                         </td>
                         <td valign="top" style="padding: 0 0 16px 12px;">
