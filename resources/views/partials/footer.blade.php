@@ -1,51 +1,139 @@
+    @php
+      $contactSourcePage = request()->route()?->getName() ?? (request()->path() === '/' ? 'home' : trim(request()->path(), '/'));
+    @endphp
 
     <script>
-const form = document.getElementById('allianceForm');
-const formMessage = document.getElementById('formMessage');
+document.querySelectorAll('[data-alliance-submit-button]').forEach((button) => {
+    if (button.dataset.spinnerBound === 'true') {
+        return;
+    }
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    formMessage.style.display = 'none';
-    formMessage.innerHTML = '';
+    const label = button.querySelector('[data-submit-label]');
 
-    let formData = new FormData(this);
+    if (!label) {
+        return;
+    }
 
-    fetch("{{ route('join.alliance') }}", {
-        method: "POST",
-        headers: {
-            'X-CSRF-TOKEN': "{{ csrf_token() }}",
-            'Accept': 'application/json'
-        },
-        body: formData
-    })
-    .then(async response => {
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw errorData;
+    const originalLabel = label.innerHTML;
+
+    button.dataset.spinnerBound = 'true';
+    button.dataset.originalLabel = originalLabel;
+});
+
+document.querySelectorAll('[data-alliance-form]').forEach((form) => {
+    const formMessage = form.querySelector('[data-form-message]');
+    const submitButton = form.querySelector('[data-alliance-submit-button]');
+    const submitLabel = submitButton?.querySelector('[data-submit-label]');
+    const originalLabel = submitButton?.dataset.originalLabel ?? submitLabel?.innerHTML ?? '';
+
+    const setSubmittingState = (isSubmitting) => {
+        if (!submitButton || !submitLabel) {
+            return;
         }
-        return response.json();
-    })
-    .then(data => {
-        formMessage.style.display = 'block';
-        formMessage.innerHTML = `<div style="padding:10px; background-color:#d4edda; color:#155724; border-radius:5px; border:1px solid #c3e6cb;">
-            ${data.message}
-        </div>`;
-        form.reset();
-    })
-    .catch(error => {
-        let errors = '';
-        if (error.errors) {
-            errors = Object.values(error.errors).flat().join('<br>');
+
+        submitButton.disabled = isSubmitting;
+        submitButton.style.opacity = isSubmitting ? '0.8' : '1';
+        submitButton.style.cursor = isSubmitting ? 'not-allowed' : '';
+
+        if (isSubmitting) {
+            submitLabel.innerHTML = `
+                <span style="display:inline-flex; align-items:center; gap:10px;">
+                    <span style="width:18px; height:18px; border:2px solid currentColor; border-right-color: transparent; border-radius:50%; display:inline-block; animation: alliance-spin 0.75s linear infinite;"></span>
+                    Sending...
+                </span>
+            `;
         } else {
-            errors = 'Something went wrong. Please try again.';
+            submitLabel.innerHTML = originalLabel;
         }
-        formMessage.style.display = 'block';
-        formMessage.innerHTML = `<div style="padding:10px; background-color:#f8d7da; color:#721c24; border-radius:5px; border:1px solid #f5c6cb;">
-            ${errors}
-        </div>`;
+    };
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (formMessage) {
+            formMessage.style.display = 'none';
+            formMessage.innerHTML = '';
+        }
+
+        const formData = new FormData(form);
+        setSubmittingState(true);
+
+        fetch("{{ route('join.alliance') }}", {
+            method: "POST",
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}",
+                'Accept': 'application/json'
+            },
+            body: formData
+        })
+            .then(async (response) => {
+                const responseText = await response.text();
+                let errorData = {};
+
+                if (responseText) {
+                    try {
+                        errorData = JSON.parse(responseText);
+                    } catch (parseError) {
+                        errorData = {
+                            message: responseText,
+                        };
+                    }
+                }
+
+                if (!response.ok) {
+                    throw errorData;
+                }
+
+                return errorData;
+            })
+            .then((data) => {
+                if (formMessage) {
+                    formMessage.style.display = 'block';
+                    formMessage.innerHTML = `<div style="padding:10px; background-color:#d4edda; color:#155724; border-radius:5px; border:1px solid #c3e6cb;">${data.message}</div>`;
+                }
+
+                const preservedSourceFields = {};
+
+                form.querySelectorAll('input[type="hidden"]').forEach((field) => {
+                    preservedSourceFields[field.name] = field.value;
+                });
+
+                form.reset();
+
+                Object.entries(preservedSourceFields).forEach(([name, value]) => {
+                    const field = form.querySelector(`input[name="${name}"]`);
+
+                    if (field) {
+                        field.value = value;
+                    }
+                });
+            })
+            .catch((error) => {
+                const errors = error.errors
+                    ? Object.values(error.errors).flat().join('<br>')
+                    : [error.message, error.debug_message].filter(Boolean).join('<br>') || 'Something went wrong. Please try again.';
+
+                if (formMessage) {
+                    formMessage.style.display = 'block';
+                    formMessage.innerHTML = `<div style="padding:10px; background-color:#f8d7da; color:#721c24; border-radius:5px; border:1px solid #f5c6cb;">${errors}</div>`;
+                }
+            })
+            .finally(() => {
+                setSubmittingState(false);
+            });
     });
 });
-</script>
+    </script>
+    <style>
+      @keyframes alliance-spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
 
 
     
@@ -73,7 +161,7 @@ form.addEventListener('submit', function(e) {
                 <li><a href="{{ route('about') }}">About DA4EA</a></li>
                 <li><a href="{{ route('programs.index') }}">Our Programs</a></li>
                 <li><a href="{{ route('home') }}#partners">Partners</a></li>
-                <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                <li><a href="{{ route('contact', ['source_page' => $contactSourcePage, 'source_section' => 'footer-links', 'source_button' => 'Contact Us', 'source_url' => request()->fullUrl()]) }}">Contact Us</a></li>
                 <li><a href="{{ url('/docs/%F0%9F%94%90%20PRIVACY%20POLICY.pdf') }}" target="_blank" rel="noopener">Privacy Policy</a></li>
 
               </ul>

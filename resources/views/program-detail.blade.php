@@ -370,7 +370,7 @@
                                 <p>67VP+9M7, 254 Toure Dr, Dar es Salaam 6300, Tanzania</p>
                             </div>
                         </div>
-                        <a href="{{ route('contact') }}" class="program-side-btn">Register Interest</a>
+                        <a href="{{ route('contact', ['source_page' => 'program-detail', 'source_section' => 'program-sidebar', 'source_button' => 'Register Interest', 'source_program_slug' => $programSlug, 'source_program_title' => $programTitle, 'source_url' => request()->fullUrl()]) }}" class="program-side-btn">Register Interest</a>
                     </div>
                 </div>
             </div>
@@ -517,7 +517,7 @@
                                 <p>1040 Haile Selassie Rd, Dar es Salaam 0255, Tanzania</p>
                             </div>
                         </div>
-                        <a href="{{ route('contact') }}" class="program-side-btn">Register Interest</a>
+                        <a href="{{ route('contact', ['source_page' => 'program-detail', 'source_section' => 'program-sidebar', 'source_button' => 'Register Interest', 'source_program_slug' => $programSlug, 'source_program_title' => $programTitle, 'source_url' => request()->fullUrl()]) }}" class="program-side-btn">Register Interest</a>
                     </div>
                 </div>
             </div>

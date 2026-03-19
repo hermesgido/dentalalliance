@@ -246,7 +246,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                     <div class="btn-area1 hero-cta-wrap">
                         <a href="{{ route('programs.index') }}" class="vl-btn2 hero-cta-primary"><span class="text">Explore
                                 Programs <i class="fa-solid fa-arrow-right"></i></span></a>
-                        <a href="{{ route('contact') }}" class="vl-btn2 hero-cta-secondary"><span class="text">Partner
+                        <a href="{{ route('contact', ['source_page' => 'home', 'source_section' => 'hero', 'source_button' => 'Partner With Us', 'source_url' => request()->fullUrl()]) }}" class="vl-btn2 hero-cta-secondary"><span class="text">Partner
                                 With Us <i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                 </div>
@@ -337,7 +337,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                     </div>
                     <div class="space36"></div>
                     <div class="btn-area1" data-aos="fade-left" data-aos-duration="1200">
-                        <a href="{{ route('contact') }}" class="vl-btn2"><span class="text">Schedule An
+                        <a href="{{ route('contact', ['source_page' => 'home', 'source_section' => 'about', 'source_button' => 'Schedule An Appointment', 'source_url' => request()->fullUrl()]) }}" class="vl-btn2"><span class="text">Schedule An
                                 Appointment <i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                 </div>
@@ -654,7 +654,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                             <a href="{{ route('programs.index') }}" class="vl-btn2">
                                 <span class="text">Explore Programs <i class="fa-solid fa-arrow-right"></i></span>
                             </a>
-                            <a href="{{ route('contact') }}" class="vl-btn2 implant-spotlight-secondary">
+                            <a href="{{ route('contact', ['source_page' => 'home', 'source_section' => 'implant-spotlight', 'source_button' => 'Discuss Partnership', 'source_url' => request()->fullUrl()]) }}" class="vl-btn2 implant-spotlight-secondary">
                                 <span class="text">Discuss Partnership <i class="fa-solid fa-arrow-right"></i></span>
                             </a>
                         </div>
@@ -884,7 +884,7 @@ performance optimization, and humanitarian impact across Africa.</p>
             </div>
             <div class="d-flex justify-content-center">
                 <div class="btn-area1" data-aos="fade-left" data-aos-duration="1200">
-                    <a href="{{ route('contact') }}" class="vl-btn2"><span class="text">Get
+                    <a href="{{ route('contact', ['source_page' => 'home', 'source_section' => 'who-we-serve', 'source_button' => 'Get Early Access', 'source_url' => request()->fullUrl()]) }}" class="vl-btn2"><span class="text">Get
                             Early Access <i class="fa-solid fa-arrow-right"></i></span></a>
                 </div>
             </div>
@@ -988,7 +988,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                         </div>
                         <div class="space32"></div>
                         <div class="btn-area1" data-aos="fade-left" data-aos-duration="1200">
-                            <a href="{{ route('contact') }}" class="vl-btn2"><span class="text">Partner With Us <i
+                            <a href="{{ route('contact', ['source_page' => 'home', 'source_section' => 'partners', 'source_button' => 'Partner With Us', 'source_url' => request()->fullUrl()]) }}" class="vl-btn2"><span class="text">Partner With Us <i
                                         class="fa-solid fa-arrow-right"></i></span></a>
                         </div>
                     </div>
@@ -1030,8 +1030,12 @@ performance optimization, and humanitarian impact across Africa.</p>
                         <br class="d-lg-block d-none">in East Africa.
                     </p>
                     <div class="space6"></div>
-                    <form id="allianceForm">
-                        <div id="formMessage" class="mb-3" style="display:none;"></div>
+                    <form id="allianceForm" data-alliance-form>
+                        <div data-form-message class="mb-3" style="display:none;"></div>
+                        <input type="hidden" name="source_page" value="home">
+                        <input type="hidden" name="source_section" value="homepage-form">
+                        <input type="hidden" name="source_button" value="Join DA4EA">
+                        <input type="hidden" name="source_url" value="{{ request()->fullUrl() }}">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="input-area">
@@ -1075,7 +1079,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                             <div class="col-lg-12">
                                 <div class="space10"></div>
                                 <div class="input-area">
-                                    <button type="submit" class="vl-btn2"><span class="text">Join DA4EA <i
+                                    <button type="submit" class="vl-btn2" data-alliance-submit-button><span class="text" data-submit-label>Join DA4EA <i
                                                 class="fa-solid fa-arrow-right"></i></span></button>
                                 </div>
                             </div>
@@ -1189,7 +1193,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                         impact — you belong here</p>
                     <div class="space24"></div>
                     <div class="btn-area1">
-                        <a href="{{ route('contact') }}" class="vl-btn4">👉 I'm Interested <span><svg
+                        <a href="{{ route('contact', ['source_page' => 'home', 'source_section' => 'bottom-cta', 'source_button' => 'I\'m Interested', 'source_url' => request()->fullUrl()]) }}" class="vl-btn4">👉 I'm Interested <span><svg
                                     xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                                     viewBox="0 0 22 22" fill="none">
                                     <path fill-rule="evenodd" clip-rule="evenodd"

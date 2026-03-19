@@ -115,4 +115,6 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    'lead_notification_to' => env('MAIL_LEAD_NOTIFICATION_TO', env('MAIL_FROM_ADDRESS', 'hello@example.com')),
+
 ];

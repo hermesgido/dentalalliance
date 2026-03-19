@@ -209,8 +209,15 @@
                         <br class="d-lg-block d-none">in East Africa.
                     </p>
                     <div class="space6"></div>
-                    <form id="allianceForm">
-                            <div id="formMessage" class="mb-3" style="display:none;"></div>
+                    <form id="allianceForm" data-alliance-form>
+                            <div data-form-message class="mb-3" style="display:none;"></div>
+                            <input type="hidden" name="source_page" value="{{ request('source_page', 'contact') }}">
+                            <input type="hidden" name="source_section" value="{{ request('source_section', 'contact-form') }}">
+                            <input type="hidden" name="source_button" value="{{ request('source_button', 'Direct contact form') }}">
+                            <input type="hidden" name="source_program_slug" value="{{ request('source_program_slug') }}">
+                            <input type="hidden" name="source_program_title" value="{{ request('source_program_title') }}">
+                            <input type="hidden" name="source_url" value="{{ request('source_url', request()->fullUrl()) }}">
+                            <input type="hidden" name="referrer_url" value="{{ request('referrer_url', url()->previous()) }}">
 
 
                         <div class="row">
@@ -260,13 +267,13 @@
                             <div class="col-lg-12">
                                 <div class="space10"></div>
                                 <div class="input-area">
-                                    <button type="submit" class="vl-btn4">Join DA4EA <span><svg
+                                    <button type="submit" class="vl-btn4" data-alliance-submit-button><span data-submit-label>Join DA4EA <span><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                                                 viewBox="0 0 22 22" fill="none">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z"
                                                     fill="white"></path>
-                                            </svg></span></button>
+                                            </svg></span></span></button>
                                 </div>
                             </div>
                             <p class="text-muted mt-3 col-lg-7 mx-auto">
