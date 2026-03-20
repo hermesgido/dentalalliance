@@ -337,7 +337,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                     </div>
                     <div class="space36"></div>
                     <div class="btn-area1" data-aos="fade-left" data-aos-duration="1200">
-                        <a href="{{ route('contact', ['source_page' => 'home', 'source_section' => 'about', 'source_button' => 'Schedule An Appointment', 'source_url' => request()->fullUrl()]) }}" class="vl-btn2"><span class="text">Schedule An
+                        <a href="https://calendar.app.google/UUP49cSc5wUxWu3m8" class="vl-btn2" target="_blank" rel="noopener noreferrer"><span class="text">Schedule An
                                 Appointment <i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                 </div>
