@@ -161,7 +161,7 @@ document.querySelectorAll('[data-alliance-form]').forEach((form) => {
                 <li><a href="{{ route('about') }}">About DA4EA</a></li>
                 <li><a href="{{ route('programs.index') }}">Our Programs</a></li>
                 <li><a href="{{ route('home') }}#partners">Partners</a></li>
-                <li><a href="{{ route('contact', ['source_page' => $contactSourcePage, 'source_section' => 'footer-links', 'source_button' => 'Contact Us', 'source_url' => request()->fullUrl()]) }}">Contact Us</a></li>
+                <li><a href="{{ route('contact', ['source_page' => $contactSourcePage, 'source_section' => 'footer-links', 'source_button' => 'Contact Us', 'source_url' => request()->fullUrl()]).'#contact-form-section' }}">Contact Us</a></li>
                 <li><a href="{{ url('/docs/%F0%9F%94%90%20PRIVACY%20POLICY.pdf') }}" target="_blank" rel="noopener">Privacy Policy</a></li>
 
               </ul>

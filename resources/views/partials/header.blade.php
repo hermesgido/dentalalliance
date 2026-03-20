@@ -180,7 +180,7 @@
                     </li>
                     <li><a href="{{ route('about') }}">About Us <span class="arrow-size"></span></a>
                     </li>
-                    <li><a href="{{ route('contact', ['source_page' => $contactSourcePage, 'source_section' => 'header-nav', 'source_button' => 'Contact Us', 'source_url' => request()->fullUrl()]) }}">Contact Us<span class="arrow-size"></span></a>
+                    <li><a href="{{ route('contact', ['source_page' => $contactSourcePage, 'source_section' => 'header-nav', 'source_button' => 'Contact Us', 'source_url' => request()->fullUrl()]).'#contact-form-section' }}">Contact Us<span class="arrow-size"></span></a>
                     </li>
                     <li><a href="#">Blogs <span class="arrow-size"></span></a>
                     </li>
@@ -191,7 +191,7 @@
             <div class="col-lg-2 col-md-6 col-6">
               <div class="vl-hero-btn d-none d-lg-block text-end">
                 <div class="btn-area1">
-                  <a href="{{ route('contact', ['source_page' => $contactSourcePage, 'source_section' => 'header-cta', 'source_button' => 'Join Now', 'source_url' => request()->fullUrl()]) }}" class="vl-btn2"><span class="text">Join
+                  <a href="{{ route('contact', ['source_page' => $contactSourcePage, 'source_section' => 'header-cta', 'source_button' => 'Join Now', 'source_url' => request()->fullUrl()]).'#contact-form-section' }}" class="vl-btn2"><span class="text">Join
                       Now <i class="fa-solid fa-arrow-right"></i></span></a>
                 </div>
               </div>

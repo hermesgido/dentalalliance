@@ -369,7 +369,7 @@
                             <p>{{ $module->location_address }}</p>
                         </div>
                     </div>
-                    <a href="{{ route('contact', ['source_page' => 'program-module-detail', 'source_section' => 'program-sidebar', 'source_button' => 'Register Interest', 'source_program_slug' => $module->slug, 'source_program_title' => $module->title, 'source_url' => request()->fullUrl()]) }}" class="program-side-btn">Register Interest</a>
+                    <a href="{{ route('contact', ['source_page' => 'program-module-detail', 'source_section' => 'program-sidebar', 'source_button' => 'Register Interest', 'source_program_slug' => $module->slug, 'source_program_title' => $module->title, 'source_url' => request()->fullUrl()]).'#contact-form-section' }}" class="program-side-btn">Register Interest</a>
                 </div>
             </div>
         </div>

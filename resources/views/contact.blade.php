@@ -194,7 +194,7 @@
 
         <div class="space60"></div>
 
-        <div class="row contact-equal-row">
+        <div class="row contact-equal-row" id="contact-form-section">
             <div class="col-lg-6">
                 <div class="images image-anime reveal contact-image-panel">
                     <img src="assets/photos/contact.webp" alt="">

@@ -378,7 +378,7 @@
                         </div>
                     @endif
 
-                    <a href="{{ route('contact', ['source_page' => 'program-detail', 'source_section' => 'program-sidebar', 'source_button' => 'Register Interest', 'source_program_slug' => $program->slug, 'source_program_title' => $program->title, 'source_url' => request()->fullUrl()]) }}" class="program-side-btn">Register Interest</a>
+                    <a href="{{ route('contact', ['source_page' => 'program-detail', 'source_section' => 'program-sidebar', 'source_button' => 'Register Interest', 'source_program_slug' => $program->slug, 'source_program_title' => $program->title, 'source_url' => request()->fullUrl()]).'#contact-form-section' }}" class="program-side-btn">Register Interest</a>
                 </div>
             </div>
         </div>
