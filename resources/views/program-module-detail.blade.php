@@ -261,11 +261,12 @@
         <div class="row align-items-center">
             <div class="col-lg-12">
                 <div class="hero-header" style="color: #fff;">
-                    <h1 class="text-anime-style-1" style="color: #fff;">{{ $program->hero_title ?: $program->title }}</h1>
+                    <h1 class="text-anime-style-1" style="color: #fff;">{{ $module->hero_title ?: $module->title }}</h1>
                     <div class="space24"></div>
                     <a href="{{ route('home') }}" class="bradecrumb" style="color: #fff;">Home <i class="fa-solid fa-angle-right"></i></a>
                     <a href="{{ route('programs.index') }}" class="bradecrumb" style="color: #fff;">Programs <i class="fa-solid fa-angle-right"></i></a>
-                    <span class="bradecrumb" style="color: #fff;">{{ $program->title }}</span>
+                    <a href="{{ route('programs.modules.index', $program) }}" class="bradecrumb" style="color: #fff;">{{ $program->title }} Modules <i class="fa-solid fa-angle-right"></i></a>
+                    <span class="bradecrumb" style="color: #fff;">{{ $module->title }}</span>
                 </div>
             </div>
         </div>
@@ -277,53 +278,54 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="program-card-main">
-                    <img src="{{ asset($program->cover_image ?: 'assets/photos/header01.webp') }}" alt="{{ $program->title }}" class="program-banner">
+                    <img src="{{ asset($module->cover_image ?: $program->cover_image ?: 'assets/photos/Copy of dollars.webp') }}" alt="{{ $module->title }}" class="program-banner">
                     <div class="program-main-content">
-                        <h3>{{ $program->hero_title ?: $program->title }}</h3>
+                        <h3>{{ $module->hero_title ?: $module->title }}</h3>
                         <p class="program-meta">
                             <img src="{{ asset('assets/img/logo/logo1.png') }}" alt="Dental Alliance logo">
                             <span>Hosted by <strong>Dental Alliance</strong></span>
                         </p>
 
                         <div class="program-divider"></div>
-                        @if ($program->content_html)
-                            <div class="program-rich-content">{!! $program->rendered_content_html !!}</div>
+                        @if ($module->content_html)
+                            <div class="program-rich-content">{!! $module->rendered_content_html !!}</div>
                         @else
-                            <h4>Details</h4>
-                            @if ($program->lead)
-                                <p>{{ $program->lead }}</p>
-                            @endif
-                            @if ($program->intro)
-                                <p>{{ $program->intro }}</p>
-                            @elseif ($program->description)
-                                <p>{{ $program->description }}</p>
+                            @if ($module->lead || $module->intro)
+                                <h4>Details</h4>
+                                @if ($module->lead)
+                                    <p>{{ $module->lead }}</p>
+                                @endif
+                                @if ($module->intro)
+                                    <p>{{ $module->intro }}</p>
+                                @endif
                             @endif
 
-                            @if (! empty($program->participation_items))
+                            @if (! empty($module->participation_items))
                                 <h5>Participation</h5>
-                                @foreach ($program->participation_items as $participationItem)
-                                    <p>{{ $participationItem }}</p>
+                                @foreach ($module->participation_items as $participationLine)
+                                    <p>{{ $participationLine }}</p>
                                 @endforeach
                             @endif
 
-                            @if (! empty($program->registration_steps))
+                            @if (! empty($module->registration_steps))
                                 <h5>How to Secure Your Seat</h5>
                                 <ol>
-                                    @foreach ($program->registration_steps as $registrationStep)
+                                    @foreach ($module->registration_steps as $registrationStep)
                                         <li>{{ $registrationStep }}</li>
                                     @endforeach
                                 </ol>
                             @endif
 
-                            @if ($program->highlights_intro || ! empty($program->highlights_items))
+                            @if ($module->highlights_intro || ! empty($module->highlights_items))
                                 <div class="program-divider"></div>
-                                <h5>Program Highlights</h5>
-                                @if ($program->highlights_intro)
-                                    <p>{{ $program->highlights_intro }}</p>
+
+                                <h5>Module Highlights</h5>
+                                @if ($module->highlights_intro)
+                                    <p>{{ $module->highlights_intro }}</p>
                                 @endif
-                                @if (! empty($program->highlights_items))
+                                @if (! empty($module->highlights_items))
                                     <ul>
-                                        @foreach ($program->highlights_items as $highlight)
+                                        @foreach ($module->highlights_items as $highlight)
                                             <li>{{ $highlight }}</li>
                                         @endforeach
                                     </ul>
@@ -333,52 +335,41 @@
                     </div>
                 </div>
 
-                @if ($program->map_url)
+                @if ($module->map_url)
                     <div class="program-map-box">
                         <h4>Location</h4>
                         <div class="space16"></div>
                         <iframe
-                            src="{{ $program->map_url }}"
+                            src="{{ $module->map_url }}"
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
-                            title="{{ $program->location_name }} map"></iframe>
-                        <h5>{{ $program->location_name }}</h5>
-                        <p>{{ $program->location_address }}</p>
+                            title="{{ $module->location_name }} map"></iframe>
+                        <h5>{{ $module->location_name }}</h5>
+                        <p>{{ $module->location_address }}</p>
                     </div>
                 @endif
             </div>
 
             <div class="col-lg-4">
                 <div class="program-card-side">
-                    @if ($program->start_at)
                         <div class="program-side-row">
-                            <span class="program-date-chip">
-                                <span style="font-size: 28px; line-height: 1;">{{ $program->start_at->format('d') }}</span>
-                                <span style="font-size: 12px;">{{ strtoupper($program->start_at->format('M')) }}</span>
-                            </span>
-                            <div>
-                                <h5>From {{ $program->start_at->format('l, M d') }}</h5>
-                                <p>{{ $program->start_at->format('h:i A') }} EAT</p>
-                                @if ($program->end_at)
-                                    <div class="space8"></div>
-                                    <h5>To {{ $program->end_at->format('l, M d') }}</h5>
-                                    <p>{{ $program->end_at->format('h:i A') }} EAT</p>
-                                @endif
-                            </div>
+                        <span class="program-date-chip"><span style="font-size: 28px; line-height: 1;">{{ optional($module->start_at)->format('d') }}</span><span style="font-size: 12px;">{{ strtoupper(optional($module->start_at)->format('M')) }}</span></span>
+                        <div>
+                            <h5>From {{ optional($module->start_at)->format('l, M d') }}</h5>
+                            <p>{{ optional($module->start_at)->format('h:i A') }} EAT</p>
+                            <div class="space8"></div>
+                            <h5>To {{ optional($module->end_at)->format('l, M d') }}</h5>
+                            <p>{{ optional($module->end_at)->format('h:i A') }} EAT</p>
                         </div>
-                        <div class="program-divider"></div>
-                    @endif
-
-                    @if ($program->location_name || $program->location_address)
-                        <div class="program-side-row">
-                            <div>
-                                <h5>{{ $program->location_name ?: 'Location' }}</h5>
-                                <p>{{ $program->location_address }}</p>
-                            </div>
+                    </div>
+                    <div class="program-divider"></div>
+                    <div class="program-side-row">
+                        <div>
+                            <h5>{{ $module->location_name ?: 'Location' }}</h5>
+                            <p>{{ $module->location_address }}</p>
                         </div>
-                    @endif
-
-                    <a href="{{ route('contact', ['source_page' => 'program-detail', 'source_section' => 'program-sidebar', 'source_button' => 'Register Interest', 'source_program_slug' => $program->slug, 'source_program_title' => $program->title, 'source_url' => request()->fullUrl()]) }}" class="program-side-btn">Register Interest</a>
+                    </div>
+                    <a href="{{ route('contact', ['source_page' => 'program-module-detail', 'source_section' => 'program-sidebar', 'source_button' => 'Register Interest', 'source_program_slug' => $module->slug, 'source_program_title' => $module->title, 'source_url' => request()->fullUrl()]) }}" class="program-side-btn">Register Interest</a>
                 </div>
             </div>
         </div>

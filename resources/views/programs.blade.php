@@ -1,102 +1,5 @@
 @include('partials.header')
 
-@php
-    $availableProgramSlugs = [
-        'digital-dentistry-workflow',
-        'dental-economics',
-    ];
-
-    $programCategories = [
-        [
-            'key' => 'advanced-clinical-training',
-            'title' => 'Advanced Clinical Training',
-            'description' => 'Specialized CPD-focused learning tracks for modern clinical excellence.',
-            'items' => [
-                [
-                    'title' => 'Digital Dentistry Workflow',
-                    'slug' => 'digital-dentistry-workflow',
-                    'image' => 'assets/photos/top.webp',
-                ],
-                [
-                    'title' => 'Implant Surgery & Prosthetics',
-                    'slug' => 'implant-surgery-prosthetics',
-                    'image' => 'assets/photos/people2.webp',
-                ],
-                [
-                    'title' => 'Aesthetic Dentistry & Smile Design',
-                    'slug' => 'aesthetic-dentistry-smile-design',
-                    'image' => 'assets/photos/header01.webp',
-                ],
-                [
-                    'title' => 'Lab-Clinic Integration Programs',
-                    'slug' => 'lab-clinic-integration-programs',
-                    'image' => 'assets/photos/team approach2.webp',
-                ],
-                [
-                    'title' => 'Dental Economics',
-                    'slug' => 'dental-economics',
-                    'image' => 'assets/photos/Copy of dollars.webp',
-                ],
-            ],
-        ],
-        [
-            'key' => 'conferences-flagship-events',
-            'title' => 'Conferences & Flagship Events',
-            'description' => 'High-level platforms connecting industry, academia, and clinical leadership.',
-            'items' => [
-                [
-                    'title' => 'Annual or Biannual DA4EA Summits',
-                    'slug' => 'da4ea-summits',
-                    'image' => 'assets/photos/people01.webp',
-                ],
-                [
-                    'title' => 'Industry-Academic-Clinical Convergence',
-                    'slug' => 'industry-academic-clinical-convergence',
-                    'image' => 'assets/photos/people04.webp',
-                ],
-            ],
-        ],
-        [
-            'key' => 'custom-institutional-training',
-            'title' => 'Custom & Institutional Training',
-            'description' => 'Tailored capacity-building pathways for institutions and partners.',
-            'items' => [
-                [
-                    'title' => 'Universities Training',
-                    'slug' => 'universities-training',
-                    'image' => 'assets/photos/universityy.webp',
-                ],
-                [
-                    'title' => 'Hospitals Training',
-                    'slug' => 'hospitals-training',
-                    'image' => 'assets/photos/universityafcn.webp',
-                ],
-                [
-                    'title' => 'NGOs Training',
-                    'slug' => 'ngos-training',
-                    'image' => 'assets/photos/ngo.webp',
-                ],
-                [
-                    'title' => 'Corporate Partners Training',
-                    'slug' => 'corporate-partners-training',
-                    'image' => 'assets/photos/team approach2.webp',
-                ],
-            ],
-        ],
-    ];
-
-    $programCategories = array_map(function (array $category) use ($availableProgramSlugs): array {
-        usort($category['items'], function (array $first, array $second) use ($availableProgramSlugs): int {
-            $firstAvailable = in_array($first['slug'], $availableProgramSlugs, true);
-            $secondAvailable = in_array($second['slug'], $availableProgramSlugs, true);
-
-            return $secondAvailable <=> $firstAvailable;
-        });
-
-        return $category;
-    }, $programCategories);
-@endphp
-
 <style>
     #vl-header-sticky {
         background: rgba(0, 0, 0, 0.64);
@@ -113,10 +16,22 @@
     }
     .programs-hero {
         position: relative;
-        background-image: linear-gradient(180deg, rgba(10, 10, 10, 0.68), rgba(10, 10, 10, 0.52)), url('{{ asset('assets/photos/header01.webp') }}');
-        background-size: cover;
+        background-image: url('{{ asset('assets/photos/header01.webp') }}');
         background-position: center;
         background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+    .programs-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(7, 6, 6, 0.55), rgba(4, 3, 3, 0.4));
+        z-index: 0;
+    }
+    .programs-hero .container {
+        position: relative;
+        z-index: 1;
     }
     .programs-main {
         background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
@@ -194,6 +109,12 @@
         color: #111827;
         margin-bottom: 12px;
     }
+    .program-card-summary {
+        margin-bottom: 16px;
+        color: #475467;
+        font-size: 16px;
+        line-height: 1.6;
+    }
     .program-card-cta {
         display: inline-flex;
         align-items: center;
@@ -209,25 +130,6 @@
         color: #fff;
         background: #fe4e00;
         border-color: #fe4e00;
-    }
-    .program-card-cta.program-card-cta-disabled {
-        border-color: #d0d5dd;
-        color: #98a2b3;
-        background: #f9fafb;
-        cursor: not-allowed;
-    }
-    .program-card-link {
-        font-weight: 600;
-        color: #9b7b35;
-    }
-    .program-card.program-card-disabled {
-        opacity: 1;
-        cursor: default;
-    }
-    .program-card.program-card-disabled:hover {
-        transform: none;
-        border-color: #e7edf7;
-        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
     }
     .program-grid[data-visible="false"] {
         display: none;
@@ -250,8 +152,6 @@
             <div class="col-lg-12">
                 <div class="hero-header" style="color: #fff;">
                     <h1 class="text-anime-style-1" style="color: #fff;">Programs</h1>
-                    <div class="space20"></div>
-                    {{-- <p style="color: #e5e7eb; max-width: 760px;">Explore DA4EA programs through filterable tracks and open each item for a dedicated detail page.</p> --}}
                     <div class="space24"></div>
                     <a href="{{ route('home') }}" class="bradecrumb" style="color: #fff;">Home <i class="fa-solid fa-angle-right"></i> Programs</a>
                 </div>
@@ -295,23 +195,15 @@
                 </div>
                 <div class="row g-4">
                     @foreach ($category['items'] as $program)
-                        @php
-                            $isAvailable = in_array($program['slug'], $availableProgramSlugs, true);
-                        @endphp
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="900">
-                            <div class="program-card {{ $isAvailable ? '' : 'program-card-disabled' }}" aria-disabled="{{ $isAvailable ? 'false' : 'true' }}">
-                                <img class="program-card-image" src="{{ asset($program['image']) }}" alt="{{ $program['title'] }}">
+                            <div class="program-card">
+                                <img class="program-card-image" src="{{ asset($program->cover_image ?: 'assets/photos/header01.webp') }}" alt="{{ $program->title }}">
                                 <div class="program-card-body">
-                                    <h4 class="program-card-title">{{ $program['title'] }}</h4>
-                                    @if ($isAvailable)
-                                        <a href="{{ route('programs.show', ['slug' => $program['slug']]) }}" class="program-card-cta">
-                                            View Program Details <i class="fa-solid fa-arrow-right"></i>
-                                        </a>
-                                    @else
-                                        <button type="button" class="program-card-cta program-card-cta-disabled" disabled>
-                                            View Program Details
-                                        </button>
-                                    @endif
+                                    <h4 class="program-card-title">{{ $program->title }}</h4>
+                                    <p class="program-card-summary">{{ $program->summary ?: $program->description ?: 'Program details coming soon.' }}</p>
+                                    <a href="{{ route('programs.modules.index', $program) }}" class="program-card-cta">
+                                        View Modules <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -326,6 +218,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         const filterButtons = document.querySelectorAll('.program-filter-btn');
         const programGrids = document.querySelectorAll('.program-grid');
+
         const activateCategory = function (targetCategory) {
             if (!targetCategory) {
                 return;
@@ -338,20 +231,19 @@
             });
 
             programGrids.forEach(function (grid) {
-                const isTarget = grid.dataset.category === targetCategory;
-                grid.dataset.visible = isTarget ? 'true' : 'false';
+                grid.dataset.visible = grid.dataset.category === targetCategory ? 'true' : 'false';
             });
         };
 
         filterButtons.forEach(function (button) {
             button.addEventListener('click', function () {
-                const targetCategory = button.dataset.filter;
-                activateCategory(targetCategory);
-                history.replaceState(null, '', `#${targetCategory}`);
+                activateCategory(button.dataset.filter);
+                history.replaceState(null, '', `#${button.dataset.filter}`);
             });
         });
 
         const hashCategory = window.location.hash.replace('#', '').trim();
+
         if (hashCategory) {
             activateCategory(hashCategory);
         }

@@ -6,7 +6,15 @@
         "build": "vite build",
         "dev": "vite"
     },
+    "dependencies": {
+        "@blocknote/core": "^0.47.1",
+        "@blocknote/mantine": "^0.47.1",
+        "@blocknote/react": "^0.47.1",
+        "react": "^19.2.4",
+        "react-dom": "^19.2.4"
+    },
     "devDependencies": {
+        "@vitejs/plugin-react": "^5.2.0",
         "@tailwindcss/vite": "^4.0.0",
         "axios": "^1.11.0",
         "concurrently": "^9.0.1",
