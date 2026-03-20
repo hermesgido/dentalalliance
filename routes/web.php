@@ -17,6 +17,13 @@ Route::get('/programs', [ProgramController::class, 'index'])->name('programs.ind
 Route::get('/programs/{program:slug}/modules', [ProgramController::class, 'modules'])->name('programs.modules.index');
 Route::get('/programs/{program:slug}/modules/{module:slug}', [ProgramModuleController::class, 'show'])->name('programs.modules.show');
 Route::get('/programs/{program:slug}', [ProgramController::class, 'show'])->name('programs.show');
+Route::get('/admin', function () {
+    if (auth()->user()?->is_admin) {
+        return redirect()->route('admin.programs.index');
+    }
+
+    return redirect()->route('admin.login');
+})->name('admin.home');
 
 Route::middleware('guest')->group(function (): void {
     Route::get('/admin/login', [AdminAuthController::class, 'create'])->name('admin.login');
