@@ -47,12 +47,14 @@
     .featured-module-card {
         display: block;
         border: 1px solid #d8e1f0;
-        border-radius: 26px;
-        padding: 24px;
+        border-radius: 22px;
+        padding: 18px;
         background: #fff;
-        box-shadow: 0 20px 44px rgba(15, 23, 42, 0.08);
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
         text-decoration: none;
         transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+        max-width: 720px;
+        margin: 0 auto;
     }
     .featured-module-card:hover {
         transform: translateY(-6px);
@@ -61,14 +63,14 @@
     }
     .featured-module-image {
         width: 100%;
-        height: 320px;
+        height: 250px;
         object-fit: cover;
-        border-radius: 18px;
-        margin-bottom: 22px;
+        border-radius: 14px;
+        margin-bottom: 18px;
     }
     .featured-module-head {
         display: flex;
-        gap: 18px;
+        gap: 14px;
         align-items: flex-start;
         justify-content: space-between;
         margin-bottom: 10px;
@@ -76,34 +78,34 @@
     .featured-module-head h3 {
         margin: 0;
         color: #101828;
-        font-size: clamp(30px, 3vw, 42px);
-        line-height: 1.18;
+        font-size: clamp(22px, 2.2vw, 30px);
+        line-height: 1.24;
     }
     .featured-module-meta {
         color: #475467;
-        font-size: 18px;
-        line-height: 1.7;
-        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 10px;
     }
     .featured-module-summary {
         color: #344054;
-        font-size: 18px;
-        line-height: 1.7;
-        margin-bottom: 18px;
+        font-size: 15px;
+        line-height: 1.65;
+        margin-bottom: 16px;
     }
     .featured-module-place {
         display: grid;
         grid-template-columns: 150px minmax(0, 1fr);
-        gap: 14px;
+        gap: 12px;
         align-items: start;
         margin-bottom: 18px;
     }
     .featured-module-place img,
     .featured-module-place iframe {
         width: 100%;
-        height: 96px;
+        height: 92px;
         object-fit: cover;
-        border-radius: 14px;
+        border-radius: 12px;
         border: 1px solid #e7edf7;
     }
     .featured-module-place strong {
@@ -235,6 +237,9 @@
         font-size: 14px;
     }
     @media (max-width: 991px) {
+        .featured-module-card {
+            max-width: none;
+        }
         .featured-module-image {
             height: 220px;
         }

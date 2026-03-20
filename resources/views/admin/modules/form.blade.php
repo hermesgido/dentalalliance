@@ -44,14 +44,6 @@
                 <input id="status_label" name="status_label" type="text" value="{{ old('status_label', $module->status_label) }}">
             </div>
             <div class="admin-field">
-                <label for="status_style">Status Style</label>
-                <select id="status_style" name="status_style">
-                    @foreach (['rsvp', 'going'] as $statusStyle)
-                        <option value="{{ $statusStyle }}" @selected(old('status_style', $module->status_style) === $statusStyle)>{{ $statusStyle }}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="admin-field">
                 <label for="sort_order">Sort Order</label>
                 <input id="sort_order" name="sort_order" type="number" min="0" value="{{ old('sort_order', $module->sort_order ?? 0) }}">
             </div>
