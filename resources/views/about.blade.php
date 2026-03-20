@@ -146,7 +146,7 @@
                 <h3 class="vl-offcanvas-sm-title">About DA4EA</h3>
                 <div class="space20"></div>
                 <span><a href="#"><i class="fa-regular fa-envelope"></i> +255 741 778 722</a></span>
-                <span><a href="#"><i class="fa-solid fa-phone"></i> cbenalal@da4ea.com</a></span>
+                <span><a href="#"><i class="fa-solid fa-phone"></i> programs@da4ea.com</a></span>
                 <span><a href="#"><i class="fa-solid fa-location-dot"></i> 1040 Haile Selassie. Dar Es Salaam</a></span>
             </div>
             <div class="space20"></div>

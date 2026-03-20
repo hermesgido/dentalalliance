@@ -25,7 +25,7 @@
                 <div class="space20"></div>
                 <span><a href="#"> <i class="fa-regular fa-envelope"></i> +255 741 778 722</a></span>
                 <span><a href="#"><i class="fa-solid fa-phone"></i>
-                        cbenalal@da4ea.com</a></span>
+                        programs@da4ea.com</a></span>
                 <span><a href="#"><i class="fa-solid fa-location-dot"></i>
                         1040 Haile Selassie. Dar Es Salaam</a></span>
             </div>
@@ -1073,7 +1073,7 @@ performance optimization, and humanitarian impact across Africa.</p>
                     <div class="text">
                       <h4>Our Email</h4>
                       <div class="space14"></div>
-                      <a href="mailto:Medicax@gmail.com">cbenalal@da4ea.com></a>
+                      <a href="mailto:programs@da4ea.com">programs@da4ea.com</a>
                     </div>
                   </div>
                 </div> -->
