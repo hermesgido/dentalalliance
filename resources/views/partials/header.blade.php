@@ -11,8 +11,11 @@
     <title>DA4EA - Advancing Dentistry in East Africa </title>
 
     <!--=====FAB ICON=======-->
-    <link rel="shortcut icon" href="{{ asset('assets/img/logo/fav-logo1.png')  }}"
-      type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon_io/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon_io/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon_io/favicon-16x16.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/favicon_io/favicon.ico') }}" type="image/x-icon">
+    <link rel="manifest" href="{{ asset('assets/favicon_io/site.webmanifest') }}">
 
     <!--===== CSS LINK =======-->
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap.min.css')  }}">
