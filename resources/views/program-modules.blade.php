@@ -37,7 +37,8 @@
         background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
     }
     .featured-modules-block {
-        margin-bottom: 44px;
+        max-width: 720px;
+        margin: 0 auto 44px;
     }
     .featured-modules-title {
         font-size: clamp(28px, 3vw, 36px);
@@ -128,10 +129,10 @@
     .module-card {
         display: block;
         border: 1px solid #e7edf7;
-        border-radius: 22px;
-        padding: 26px;
+        border-radius: 18px;
+        padding: 24px;
         background: #fff;
-        box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
         text-decoration: none;
         transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
     }
@@ -142,28 +143,31 @@
     }
     .module-card-grid {
         display: grid;
-        grid-template-columns: 230px minmax(0, 1fr);
-        gap: 24px;
-        align-items: start;
+        grid-template-columns: 200px minmax(0, 1fr);
+        gap: 22px;
+        align-items: center;
     }
     .module-card-image {
         width: 100%;
-        height: 170px;
-        object-fit: cover;
-        border-radius: 16px;
+        height: 102px;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 12px;
+        background: #fff;
+        border: 1px solid #eef2f7;
     }
     .module-card-head {
         display: flex;
-        gap: 18px;
-        align-items: flex-start;
+        gap: 16px;
+        align-items: center;
         justify-content: space-between;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
     }
     .module-card-head h3 {
         margin: 0;
         color: #101828;
-        font-size: clamp(28px, 3vw, 38px);
-        line-height: 1.2;
+        font-size: clamp(20px, 2vw, 26px);
+        line-height: 1.35;
     }
     .module-status-chip {
         display: inline-flex;
@@ -187,28 +191,22 @@
     }
     .module-meta {
         color: #475467;
-        font-size: 17px;
-        line-height: 1.6;
-        margin-bottom: 12px;
-    }
-    .module-summary {
-        color: #344054;
-        font-size: 18px;
-        line-height: 1.7;
-        margin-bottom: 18px;
+        font-size: 15px;
+        line-height: 1.45;
+        margin-bottom: 8px;
     }
     .module-place {
         display: flex;
-        gap: 14px;
-        align-items: flex-start;
-        margin-bottom: 18px;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 0;
         color: #344054;
     }
     .module-place-icon {
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
-        background: #f2f4f7;
+        width: 22px;
+        height: 22px;
+        border-radius: 0;
+        background: transparent;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -216,25 +214,7 @@
         flex-shrink: 0;
     }
     .module-place strong {
-        display: block;
-        color: #101828;
-        margin-bottom: 4px;
-    }
-    .module-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .module-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 16px;
-        border-radius: 999px;
-        background: #f2f4f7;
-        color: #475467;
-        font-weight: 600;
-        font-size: 14px;
+        display: none;
     }
     @media (max-width: 991px) {
         .featured-module-card {
@@ -254,7 +234,7 @@
             grid-template-columns: 1fr;
         }
         .module-card-image {
-            height: 220px;
+            height: 140px;
         }
         .module-card-head {
             flex-direction: column;
@@ -351,18 +331,11 @@
                                                 {{ $module->start_at->format('l, M d, h:i A') }} - {{ $module->end_at->format('l, M d, h:i A') }} EAT
                                             @endif
                                         </div>
-                                        <div class="module-summary">{{ $module->summary ?: $module->lead ?: 'Module details coming soon.' }}</div>
                                         <div class="module-place">
                                             <span class="module-place-icon"><i class="fa-solid fa-location-dot"></i></span>
                                             <div>
-                                                <strong>{{ $module->location_name ?: 'In person' }}</strong>
-                                                <span>{{ $module->location_address }}</span>
+                                                <span>{{ $module->location_name ?: 'In person' }}</span>
                                             </div>
-                                        </div>
-                                        <div class="module-tags">
-                                            <span class="module-tag"><i class="fa-regular fa-clock"></i> Scheduled</span>
-                                            <span class="module-tag"><i class="fa-solid fa-user-group"></i> Dental Alliance</span>
-                                            <span class="module-tag"><i class="fa-solid fa-arrow-right"></i> Open Module Details</span>
                                         </div>
                                     </div>
                                 </div>
