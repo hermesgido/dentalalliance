@@ -121,6 +121,10 @@
     .module-month-block + .module-month-block {
         margin-top: 38px;
     }
+    .module-month-block {
+        max-width: 720px;
+        margin: 0 auto;
+    }
     .module-month-title {
         font-size: clamp(28px, 3vw, 36px);
         color: #1f2937;
