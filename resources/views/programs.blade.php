@@ -131,6 +131,13 @@
         background: #fe4e00;
         border-color: #fe4e00;
     }
+    .program-card-cta.is-disabled {
+        border-color: #d0d9e8;
+        color: #98a2b3;
+        background: #f8fafc;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
     .program-grid[data-visible="false"] {
         display: none;
     }
@@ -201,9 +208,15 @@
                                 <div class="program-card-body">
                                     <h4 class="program-card-title">{{ $program->title }}</h4>
                                     <p class="program-card-summary">{{ $program->summary ?: $program->description ?: 'Program details coming soon.' }}</p>
-                                    <a href="{{ route('programs.modules.index', $program) }}" class="program-card-cta">
-                                        View Modules <i class="fa-solid fa-arrow-right"></i>
-                                    </a>
+                                    @if (($program->active_modules_count ?? 0) > 0)
+                                        <a href="{{ route('programs.modules.index', $program) }}" class="program-card-cta">
+                                            View Modules <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    @else
+                                        <span class="program-card-cta is-disabled" aria-disabled="true">
+                                            View Modules <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
                         </div>

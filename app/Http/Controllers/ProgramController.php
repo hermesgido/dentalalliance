@@ -12,6 +12,9 @@ class ProgramController extends Controller
     {
         $programs = Program::query()
             ->where('is_active', true)
+            ->withCount([
+                'modules as active_modules_count' => fn ($query) => $query->where('is_active', true),
+            ])
             ->orderBy('sort_order')
             ->orderBy('title')
             ->get();
