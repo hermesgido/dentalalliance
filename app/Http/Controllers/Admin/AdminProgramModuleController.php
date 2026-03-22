@@ -28,6 +28,7 @@ class AdminProgramModuleController extends Controller
             'program' => $program,
             'module' => new ProgramModule([
                 'status_style' => 'rsvp',
+                'delivery_mode' => 'in_person',
                 'is_active' => true,
             ]),
         ]);

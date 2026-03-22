@@ -67,6 +67,13 @@
                 <label for="map_url">Map URL</label>
                 <input id="map_url" name="map_url" type="text" value="{{ old('map_url', $module->map_url) }}">
             </div>
+            <div class="admin-field">
+                <label for="delivery_mode">Delivery Mode</label>
+                <select id="delivery_mode" name="delivery_mode">
+                    <option value="in_person" @selected(old('delivery_mode', $module->delivery_mode ?? 'in_person') === 'in_person')>In person</option>
+                    <option value="online" @selected(old('delivery_mode', $module->delivery_mode) === 'online')>Online</option>
+                </select>
+            </div>
         </div>
 
         <div class="admin-grid" style="margin-top: 18px;">

@@ -118,6 +118,38 @@
         margin: 0 0 6px;
         color: #475467;
     }
+    .module-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .module-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        background: #f2f4f7;
+        color: #475467;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .module-tag.is-upcoming {
+        background: #ecfdf3;
+        color: #067647;
+    }
+    .module-tag.is-completed {
+        background: #f2f4f7;
+        color: #475467;
+    }
+    .module-tag.is-live {
+        background: #eff8ff;
+        color: #175cd3;
+    }
+    .module-tag.is-muted {
+        background: #f8fafc;
+        color: #667085;
+    }
     .module-month-block + .module-month-block {
         margin-top: 38px;
     }
@@ -303,9 +335,8 @@
                                     </div>
                                 </div>
                                 <div class="module-tags">
-                                    <span class="module-tag"><i class="fa-regular fa-clock"></i> Featured event</span>
-                                    <span class="module-tag"><i class="fa-solid fa-location-dot"></i> In person</span>
-                                    <span class="module-tag"><i class="fa-solid fa-user-group"></i> Dental Alliance</span>
+                                    <span class="module-tag {{ $module->timing_status_class }}"><i class="fa-regular fa-clock"></i> {{ $module->timing_status_label }}</span>
+                                    <span class="module-tag"><i class="fa-solid fa-location-dot"></i> {{ $module->delivery_mode_label }}</span>
                                 </div>
                             </a>
                         </div>

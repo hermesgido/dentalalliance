@@ -138,3 +138,31 @@ it('rejects non-embeddable google short links for module maps', function () {
         ])
         ->assertSessionHasErrors('map_url');
 });
+
+it('defaults module delivery mode to in person when not provided', function () {
+    $admin = User::factory()->create([
+        'is_admin' => true,
+    ]);
+
+    $program = Program::query()->create([
+        'title' => 'Dental Economics',
+        'slug' => 'dental-economics',
+        'category' => 'advanced-clinical-training',
+        'has_modules' => true,
+        'is_active' => true,
+    ]);
+
+    $this->actingAs($admin)
+        ->post(route('admin.programs.modules.store', $program), [
+            'title' => 'Module 1',
+            'is_active' => '1',
+        ])
+        ->assertRedirect();
+
+    $module = ProgramModule::query()->latest('id')->firstOrFail();
+
+    expect($module->delivery_mode)
+        ->toBe('in_person')
+        ->and($module->delivery_mode_label)
+        ->toBe('In person');
+});
